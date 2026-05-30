@@ -85,6 +85,7 @@ def build_dashboard():
         '📱 차세대 이동통신(5G/6G) 및 시장 동향': 'pt_1',
         '🏢 공공·산업망 및 간섭 관리': 'pt_2',
         '⚖️ 글로벌 주파수 정책 및 법안': 'pt_3'
+        '기타': 'pt_4'
     }
     pt_trs = {b_id: "" for b_id in pt_html_ids.values()}
     hidden_divs_html = ""
@@ -93,9 +94,9 @@ def build_dashboard():
         category_raw = item.get('category', '').strip()
         
         # 기본 카테고리 분류 (텍스트가 포함되어 있는지 매칭)
-        tab_id = 'pt_1' # 기본값: 차세대 이동통신
+        tab_id = 'pt_4' 
         for cat_key, html_id in pt_html_ids.items():
-            if html_id in category_raw or cat_key in category_raw or category_raw in cat_key:
+            if cat_key != '기타' and (html_id in category_raw or cat_key in category_raw or category_raw in cat_key):
                 tab_id = html_id
                 break
                 
