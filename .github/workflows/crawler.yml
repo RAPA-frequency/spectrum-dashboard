@@ -24,7 +24,8 @@ jobs:
       - name: 3. 필수 라이브러리 설치
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 openai selenium webdriver-manager
+          pip install requests beautifulsoup4 openai selenium webdriver-manager lxml
+          - name: 3. 필수 라이브러리 설치
 
       - name: 4. FCC 신규 데이터 수집
         env:
