@@ -84,7 +84,7 @@ def build_dashboard():
         '🛰️ 위성통신 및 D2D': 'pt_0',
         '📱 차세대 이동통신(5G/6G) 및 시장 동향': 'pt_1',
         '🏢 공공·산업망 및 간섭 관리': 'pt_2',
-        '⚖️ 글로벌 주파수 정책 및 법안': 'pt_3'
+        '⚖️ 글로벌 주파수 정책 및 법안': 'pt_3',
         '기타': 'pt_4'
     }
     pt_trs = {b_id: "" for b_id in pt_html_ids.values()}
