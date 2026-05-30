@@ -6,6 +6,10 @@ on:
     - cron: '0 23 * * *'
   workflow_dispatch: # 깃허브 웹에서 [Run workflow] 버튼으로 언제든 수동 실행 가능
 
+# 🌟 2026년 깃허브 환경 정책(Node.js 24) 강제 적용을 위한 환경 변수 설정
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   crawl_and_build:
     runs-on: ubuntu-latest
@@ -18,7 +22,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip' # 패키지 캐싱으로 실행 속도 향상
+          # 🌟 에러를 유발하던 cache: 'pip' 옵션을 완전히 제거했습니다.
 
       - name: 3. 필수 라이브러리 설치
         run: |
@@ -41,11 +45,6 @@ jobs:
           python policy_scraper.py
           cd ..
 
-      # 💡 향후 영국(Ofcom), 중국, 일본 크롤러가 추가되면 이 자리에 스텝을 늘려주면 됩니다.
-      # - name: 6. Ofcom 신규 데이터 수집 (추가 예정)
-      #   run: |
-      #     cd Ofcom && python ofcom_scraper.py && cd ..
-
       - name: 7. 통합 마스터 빌드 스크립트 가동 (최종 index.html 조립)
         run: |
           python build_dashboard.py
@@ -56,10 +55,10 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
           # 변경되거나 새롭게 생성된 파일들을 깃허브 스테이지에 추가
-          git add FCC/fcc_data.json FCC/fcc.html
-          git add PolicyTracker/policy_db.json PolicyTracker/policy.html
+          git add FCC/fcc_data.json FCC/fcc.html || echo "FCC 파일 변경 없음"
+          git add PolicyTracker/policy_db.json PolicyTracker/policy.html || echo "PT 파일 변경 없음"
           git add index.html
           
-          # 변경 사항이 있을 때만 커밋 및 푸시 수행 (에러 방지)
+          # 변경 사항이 있을 때만 커밋 및 푸시 수행
           git commit -m "🤖 [자동화] 데이터 수집 및 대시보드 통합 빌드 완료 ($(date +'%Y-%m-%d'))" || echo "변경된 파일이 없습니다."
           git push
