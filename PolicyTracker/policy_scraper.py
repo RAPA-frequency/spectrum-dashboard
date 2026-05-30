@@ -1,0 +1,296 @@
+import requests
+from bs4 import BeautifulSoup
+from openai import OpenAI
+from datetime import datetime
+import json
+import os
+import time
+
+# ==========================================
+# 1. 설정 및 OpenAI 연동
+# ==========================================
+RSS_URL = "https://www.policytracker.com/feed/"
+HEADERS = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+DB_FILE = "policy_db.json"
+HTML_FILE = "policy.html"
+
+# ==========================================
+# 2. 데이터베이스(JSON) 관리 함수
+# ==========================================
+def load_db():
+    """기존에 저장된 기사 목록을 불러옵니다."""
+    if os.path.exists(DB_FILE):
+        with open(DB_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+def save_db(data):
+    """기사 목록을 파일로 저장합니다."""
+    with open(DB_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=4)
+
+# ==========================================
+# 3. GPT 번역 및 요약 함수 (제목·본문 번역 + 진짜 요약 생성)
+# ==========================================
+def gpt_translate_all(title_en, summary_en, full_text_en, max_retries=3):
+    """
+    제목과 본문은 번역하고, 요약은 본문을 바탕으로 AI가 직접 생성합니다.
+    """
+    prompt = f"""아래 [TITLE]과 [FULL_TEXT]를 바탕으로 지시사항을 수행하고,
+다음 JSON 형식으로만 출력하세요. 설명, 주석, 마크다운 코드블록(```)은 절대 포함하지 마세요.
+
+{{
+  "title_ko": "번역된 제목",
+  "summary_ko": "본문의 핵심 내용을 2~3줄로 직접 요약한 한국어 텍스트",
+  "full_text_ko": "전체 본문 번역본"
+}}
+
+[TITLE]
+{title_en}
+
+[FULL_TEXT]
+{full_text_en}"""
+
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[
+                    {
+                        "role": "system",
+                        "content": """당신은 통신, 주파수(Spectrum), 방송, IT 정책 분야 전문 번역가이자 요약 전문가입니다.
+
+[작업 원칙]
+1. title_ko: 영어 원본 제목을 한국어로 자연스럽게 번역합니다.
+2. summary_ko: 영어 본문([FULL_TEXT])을 읽고 가장 중요한 핵심 내용을 2~3문장으로 간결하게 직접 요약(Summarize)하여 한국어로 작성합니다. 각 문장 끝에는 자연스럽게 줄바꿈(\n)을 넣어주세요.
+3. full_text_ko: 영어 원본 본문을 빠짐없이 완전 번역합니다. 절대 생략하거나 재구성하지 않습니다. 특히, 원본의 문단 구분(줄바꿈 기호 '\n\n')을 그대로 유지하여 가독성 있게 줄바꿈된 형태로 번역 결과를 작성하세요. 통짜 문단으로 합치지 마세요.
+
+[용어 규칙]
+- reserve price = 최저입찰가
+- coverage obligations = 망 구축 의무
+- regional operators = 지역 사업자
+- nationwide operators = 전국 사업자
+- licences/licensees = 주파수 이용권 / 이용권자
+- deployment = 망 구축
+- auction = 경매
+- spectrum = 주파수
+- spectrum allocation = 주파수 할당
+- fourth operator = 제4 사업자
+
+[출력 규칙]
+- JSON만 출력합니다.
+- 설명, 주석, 마크다운 코드블록(```)을 절대 추가하지 않습니다."""
+                    },
+                    {
+                        "role": "user",
+                        "content": prompt
+                    }
+                ],
+                temperature=0.3, # 요약을 위해 창의성 살짝 부여
+                max_tokens=16000,
+                top_p=1
+            )
+            time.sleep(1)
+
+            raw = response.choices[0].message.content.strip()
+            # 혹시 ```json ... ``` 형식으로 왔을 경우 제거
+            raw = raw.removeprefix("```json").removeprefix("```").removesuffix("```").strip()
+
+            result = json.loads(raw)
+            return result
+
+        except json.JSONDecodeError as e:
+            print(f"  ⚠️ JSON 파싱 실패 (시도 {attempt}/{max_retries}): {e}")
+        except Exception as e:
+            print(f"  ⚠️ API 호출 실패 (시도 {attempt}/{max_retries}): {e}")
+
+        if attempt < max_retries:
+            wait = 2 ** attempt  # 지수 백오프: 2초, 4초, 8초
+            print(f"  ⏳ {wait}초 후 재시도합니다...")
+            time.sleep(wait)
+
+    # 모든 재시도 실패 시 원문 그대로 반환 (summary_ko는 기존 원문 요약을 임시로 사용)
+    print("  ❌ 번역 최종 실패. 원문을 저장합니다.")
+    return {
+        "title_ko": title_en,
+        "summary_ko": summary_en,
+        "full_text_ko": full_text_en
+    }
+
+# ==========================================
+# 4. 메인 실행 로직 (새 기사 확인 및 업데이트)
+# ==========================================
+def update_dashboard():
+    print(f"[{datetime.now()}] 새로운 기사 업데이트를 시작합니다...")
+
+    # 1. 기존 데이터 불러오기
+    db = load_db()
+
+    # ✅ URL 기반 중복 체크 (제목 기반보다 안정적)
+    existing_urls = {item.get("url", "") for item in db}
+
+    # 2. RSS 피드 가져오기
+    res = requests.get(RSS_URL, headers=HEADERS)
+    if res.status_code != 200:
+        print("페이지를 불러오는데 실패했습니다.")
+        return
+
+    soup = BeautifulSoup(res.content, 'xml')
+    articles = soup.find_all('item')
+
+    new_articles = []
+
+    # 3. 새로운 기사만 걸러서 번역하기
+    for art in articles:
+        title_en = art.title.text.strip() if art.title else "제목 없음"
+
+        # ✅ URL로 중복 판단
+        url = art.link.text.strip() if art.link else ""
+        if url in existing_urls:
+            continue
+
+        print(f"✨ [새로운 기사 발견] 번역 중... : {title_en}")
+        date_raw = art.pubDate.text.strip() if art.pubDate else "날짜 없음"
+
+        desc_tag = art.description
+        summary_en = BeautifulSoup(desc_tag.text, 'html.parser').get_text(separator='\n', strip=True) if desc_tag else "요약 없음"
+
+        content_tag = art.find('content:encoded')
+        full_text_en = BeautifulSoup(content_tag.text, 'html.parser').get_text(separator='\n\n', strip=True) if content_tag else summary_en
+
+        # ✅ 1회 통합 번역 호출 (기존 3회 → 1회)
+        translated = gpt_translate_all(title_en, summary_en, full_text_en)
+
+        article_data = {
+            "url": url,                              # ✅ URL 필드 추가
+            "title_en": title_en,
+            "title_ko": translated["title_ko"],
+            "date": date_raw,
+            "summary_en": summary_en,
+            "summary_ko": translated["summary_ko"],
+            "full_text_en": full_text_en,
+            "full_text_ko": translated["full_text_ko"]
+        }
+        new_articles.append(article_data)
+
+    if not new_articles:
+        print("✅ 새로 추가된 기사가 없습니다. 최신 상태입니다.")
+    else:
+        db = new_articles + db
+        save_db(db)
+        print(f"✅ {len(new_articles)}개의 새 기사가 DB에 추가되었습니다.")
+
+    generate_html_dashboard(db)
+
+# ==========================================
+# 5. HTML 목록형 대시보드 렌더링 (새 창 열기 버전)
+# ==========================================
+def generate_html_dashboard(db_data):
+    rows_html = ""
+    hidden_contents = ""
+
+    for idx, item in enumerate(db_data):
+        # replace 변환을 제거하고 원본 텍스트를 그대로 사용합니다.
+        sum_ko = item.get('summary_ko', '')
+        txt_en = item.get('full_text_en', '')
+        txt_ko = item.get('full_text_ko', '')
+
+        rows_html += f"""
+        <tr class="item-row" onclick="openNewWindow('article-{idx}')">
+            <td class="col-date">{item.get('date', '')[:16]}</td>
+            <td class="col-title">
+                <strong>{item.get('title_ko', '')}</strong><br>
+                <span class="en-title">{item.get('title_en', '')}</span>
+            </td>
+            <td class="col-summary" style="white-space: pre-wrap;">{sum_ko}</td>
+        </tr>
+        """
+
+        hidden_contents += f"""
+        <div id="article-{idx}" style="display: none;">
+            <div style="max-width: 900px; margin: 0 auto; font-family: 'Malgun Gothic', sans-serif; color: #333; line-height: 1.7;">
+                <h2 style="color: #2c3e50; border-bottom: 2px solid #34495e; padding-bottom: 10px; line-height: 1.4;">{item['title_ko']}</h2>
+                <p style="color: #7f8c8d; font-size: 0.9em; margin-bottom: 30px;">발행일: {item['date']}</p>
+
+                <div style="background: #f8fafc; padding: 25px; border-radius: 8px; border: 1px solid #cbd5e1; margin-bottom: 30px;">
+                    <span style="background-color: #2980b9; color: white; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-size: 0.85em;">🇰🇷 한국어 번역 본문</span>
+                    <div style="margin-top: 15px; font-size: 1.05em; color: #1a202c; white-space: pre-wrap;">{txt_ko}</div>
+                </div>
+
+                <div style="background: #ffffff; padding: 25px; border-radius: 8px; border: 1px solid #e2e8f0;">
+                    <span style="background-color: #7f8c8d; color: white; padding: 5px 12px; border-radius: 4px; font-weight: bold; font-size: 0.85em;">🇬🇧 영문 원본 본문</span>
+                    <div style="margin-top: 15px; font-size: 0.95em; color: #4a5568; white-space: pre-wrap;">{txt_en}</div>
+                </div>
+            </div>
+        </div>
+        """
+        
+
+    html_template = f"""
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>PolicyTracker 동향 대시보드</title>
+        <style>
+            body {{ font-family: 'Malgun Gothic', sans-serif; background: #f4f6f9; padding: 30px; color: #333; }}
+            .container {{ max-width: 1200px; margin: 0 auto; }}
+            h1 {{ color: #2c3e50; border-bottom: 3px solid #34495e; padding-bottom: 10px; margin-bottom: 30px; }}
+
+            table {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }}
+            th, td {{ padding: 15px 20px; border-bottom: 1px solid #e2e8f0; text-align: left; }}
+            th {{ background-color: #34495e; color: white; font-size: 1.05em; }}
+
+            .col-date {{ width: 15%; font-size: 0.85em; }}
+            .col-title {{ width: 40%; font-size: 1.05em; }}
+            .col-summary {{ width: 45%; font-size: 0.95em; }}
+
+            .en-title {{ font-size: 0.85em; color: #95a5a6; display: block; margin-top: 5px; }}
+
+            .item-row {{ cursor: pointer; transition: background 0.2s; }}
+            .item-row:hover {{ background-color: #e2e8f0; }}
+            .item-row:hover .col-title strong {{ color: #2980b9; text-decoration: underline; }}
+        </style>
+        <script>
+            function openNewWindow(articleId) {{
+                var content = document.getElementById(articleId).innerHTML;
+                var newWin = window.open('', '_blank');
+                newWin.document.open();
+                newWin.document.write('<html><head><title>기사 상세 본문</title></head><body style="background-color: #f4f6f9; padding: 40px;">' + content + '</body></html>');
+                newWin.document.close();
+            }}
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>📡 주파수 정책 동향(PolicyTracker)</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-date">발행일</th>
+                        <th class="col-title">기사 제목 (클릭하면 새 창에서 열립니다)</th>
+                        <th class="col-summary">핵심 요약</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {rows_html}
+                </tbody>
+            </table>
+        </div>
+
+        <div id="hidden-data">
+            {hidden_contents}
+        </div>
+    </body>
+    </html>
+    """
+
+    with open(HTML_FILE, "w", encoding="utf-8") as f:
+        f.write(html_template)
+    print(f"✅ 대시보드 업데이트 완료! '{HTML_FILE}' 파일이 생성되었습니다.")
+
+if __name__ == "__main__":
+    update_dashboard()
