@@ -25,21 +25,21 @@ jobs:
         run: |
           pip install requests beautifulsoup4 openai lxml selenium webdriver-manager
 
-      - name: 4. Run FCC Scraper
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          cd FCC
-          python fcc.py
-          cd ..
+   #   - name: 4. Run FCC Scraper
+   #     env:
+   #       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+   #     run: |
+   #       cd FCC
+   #       python fcc.py
+   #       cd ..
 
-      - name: 5. Run PolicyTracker Scraper
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          cd PolicyTracker
-          python policy_scraper.py
-          cd ..
+    #  - name: 5. Run PolicyTracker Scraper
+    #    env:
+    #      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    #    run: |
+    #      cd PolicyTracker
+    #      python policy_scraper.py
+    #      cd ..
 
       - name: 6. Run Master Dashboard Builder
         run: |
