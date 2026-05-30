@@ -27,7 +27,7 @@ def build_dashboard():
     with open(HTML_FILE, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    # 🌟 1. 업데이트 날짜 강력 갱신
+    # 1. 업데이트 날짜 갱신
     now = datetime.now()
     current_date_str = f"'{now.strftime('%y')}년 {now.month}월 {now.day}일 기준"
     html_content = re.sub(
@@ -38,7 +38,7 @@ def build_dashboard():
         flags=re.IGNORECASE | re.DOTALL
     )
 
-    # 🌟 2. FCC 데이터 주입
+    # 2. FCC 데이터 주입
     fcc_data = load_json_safe(FCC_JSON_PATH)
     fcc_html_ids = {'무선통신국 (WTB)': 'fcc_541', '공학기술처 (OET)': 'fcc_526', '우주국 (Space)': 'fcc_13329'}
     fcc_trs = {b_id: "" for b_id in fcc_html_ids.values()}
@@ -59,7 +59,7 @@ def build_dashboard():
         safe_repl = r'\g<1>\n' + fcc_trs[b_id].replace('\\', '\\\\') + r'\n                    \g<3>'
         html_content = re.sub(pattern, safe_repl, html_content, count=1, flags=re.DOTALL)
 
-    # 🌟 3. PolicyTracker 데이터 주입 (pt_4 기타 탭 포함)
+    # 3. PolicyTracker 데이터 주입
     pt_data = load_json_safe(PT_JSON_PATH)
     pt_html_ids = {
         '위성통신': 'pt_0', 'D2D': 'pt_0',
@@ -74,7 +74,6 @@ def build_dashboard():
     for i, item in enumerate(pt_data):
         category_raw = item.get('category', '').strip()
         
-        # 유연한 카테고리 매칭 (못 찾으면 무조건 pt_4 기타 탭으로)
         tab_id = 'pt_4' 
         for cat_key, html_id in pt_html_ids.items():
             if cat_key in category_raw:
@@ -119,12 +118,14 @@ def build_dashboard():
         safe_repl = r'\g<1>\n' + pt_trs[b_id].replace('\\', '\\\\') + r'\n                    \g<3>'
         html_content = re.sub(pattern, safe_repl, html_content, count=1, flags=re.DOTALL)
 
-    if 'id="hidden-data"' in html_content:
-        hidden_pattern = r'(<div id="hidden-data"[^>]*>)(.*?)(</div>)'
-        safe_hidden_repl = r'\g<1>\n' + hidden_divs_html.replace('\\', '\\\\') + r'\n</div>'
-        html_content = re.sub(hidden_pattern, safe_hidden_repl, html_content, count=1, flags=re.DOTALL)
+    # 🌟 [치명적 버그 수정] 에러를 일으키던 정규식 제거.
+    # <div id="hidden-data"> 부터 문서 제일 끝까지 전부 도려내고 완벽하게 깨끗한 상태로 재부착합니다.
+    if '<div id="hidden-data"' in html_content:
+        html_content = re.sub(r'<div id="hidden-data".*', '', html_content, flags=re.DOTALL)
     else:
-        html_content = html_content.replace('</body>', f'<div id="hidden-data">\n{hidden_divs_html}\n</div>\n</body>')
+        html_content = html_content.replace('</body>', '').replace('</html>', '')
+
+    html_content = html_content.strip() + f'\n\n\n<div id="hidden-data">\n{hidden_divs_html}\n</div>\n</body>\n</html>'
 
     with open(HTML_FILE, 'w', encoding='utf-8') as f:
         f.write(html_content)
