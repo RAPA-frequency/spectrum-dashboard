@@ -4,62 +4,48 @@ import time
 import re
 from datetime import datetime
 
-# 파일 경로 설정
 FCC_JSON_PATH = 'FCC/fcc_data.json'
 PT_JSON_PATH = 'PolicyTracker/policy_db.json'
 HTML_FILE = 'index.html'
 
 def load_json_safe(file_path):
-    """JSON 파일을 안전하게 읽어오는 함수"""
     if os.path.exists(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             try:
                 return json.load(f)
             except json.JSONDecodeError:
-                print(f"⚠️ '{file_path}' 올바른 JSON 형식이 아닙니다.")
                 return []
-    print(f"ℹ️ '{file_path}' 파일이 존재하지 않아 빈 리스트로 처리합니다.")
     return []
 
 def build_dashboard():
-    print("🚀 각 폴더의 데이터를 취합하여 대시보드 빌드를 시작합니다...")
+    print("🚀 대시보드 빌드를 시작합니다...")
 
     if not os.path.exists(HTML_FILE):
-        print(f"⚠️ 기준이 되는 '{HTML_FILE}' 파일이 존재하지 않습니다.")
+        print(f"⚠️ '{HTML_FILE}' 파일이 없습니다.")
         return
 
     with open(HTML_FILE, 'r', encoding='utf-8') as f:
         html_content = f.read()
 
-    # ----------------------------------------------------------------
-    # 1. 상단 업데이트 기준일 최신화 (실행 당일 날짜로 세팅)
-    # ----------------------------------------------------------------
+    # 🌟 1. 업데이트 날짜 강력 갱신
     now = datetime.now()
-    current_date_str = f" '{now.strftime('%y')}년 {now.month}월 {now.day}일 기준"
+    current_date_str = f"'{now.strftime('%y')}년 {now.month}월 {now.day}일 기준"
     html_content = re.sub(
-        r"(<h5[^>]*>업데이트:).*?(</h5>)", 
+        r"(<h5[^>]*>.*?업데이트\s*:\s*).*?(</h5>)", 
         rf"\g<1>{current_date_str}\g<2>", 
         html_content, 
         count=1, 
         flags=re.IGNORECASE | re.DOTALL
     )
 
-    # ----------------------------------------------------------------
-    # 2. [파트 A] FCC 데이터 취합 및 HTML 주입 (기존 유지)
-    # ----------------------------------------------------------------
+    # 🌟 2. FCC 데이터 주입
     fcc_data = load_json_safe(FCC_JSON_PATH)
-    fcc_html_ids = {
-        '무선통신국 (WTB)': 'fcc_541',
-        '공학기술처 (OET)': 'fcc_526',
-        '우주국 (Space)': 'fcc_13329'
-    }
+    fcc_html_ids = {'무선통신국 (WTB)': 'fcc_541', '공학기술처 (OET)': 'fcc_526', '우주국 (Space)': 'fcc_13329'}
     fcc_trs = {b_id: "" for b_id in fcc_html_ids.values()}
 
     for item in fcc_data:
         tab_id = fcc_html_ids.get(item.get('bureau', ''))
-        if not tab_id: 
-            continue
-        
+        if not tab_id: continue
         fcc_trs[tab_id] += f"""
                     <tr class="item-row">
                         <td class="col-band"><span class="badge">{item.get('type', 'Notice')}</span></td>
@@ -73,43 +59,33 @@ def build_dashboard():
         safe_repl = r'\g<1>\n' + fcc_trs[b_id].replace('\\', '\\\\') + r'\n                    \g<3>'
         html_content = re.sub(pattern, safe_repl, html_content, count=1, flags=re.DOTALL)
 
-
-    # ----------------------------------------------------------------
-    # 3. [파트 B] PolicyTracker 데이터 취합 및 히든 레이아웃 매핑 수정
-    # ----------------------------------------------------------------
+    # 🌟 3. PolicyTracker 데이터 주입 (pt_4 기타 탭 포함)
     pt_data = load_json_safe(PT_JSON_PATH)
-    
-    # 공백이나 이모지 정합성을 방지하기 위해 딕셔너리 매핑 고도화
     pt_html_ids = {
-        '🛰️ 위성통신 및 D2D': 'pt_0',
-        '📱 차세대 이동통신(5G/6G) 및 시장 동향': 'pt_1',
-        '🏢 공공·산업망 및 간섭 관리': 'pt_2',
-        '⚖️ 글로벌 주파수 정책 및 법안': 'pt_3',
+        '위성통신': 'pt_0', 'D2D': 'pt_0',
+        '이동통신': 'pt_1', '5G': 'pt_1', '6G': 'pt_1',
+        '공공': 'pt_2', '산업망': 'pt_2', '간섭': 'pt_2',
+        '정책': 'pt_3', '법안': 'pt_3',
         '기타': 'pt_4'
     }
-    pt_trs = {b_id: "" for b_id in pt_html_ids.values()}
+    pt_trs = {b_id: "" for b_id in ['pt_0', 'pt_1', 'pt_2', 'pt_3', 'pt_4']}
     hidden_divs_html = ""
 
     for i, item in enumerate(pt_data):
         category_raw = item.get('category', '').strip()
         
-        # 기본 카테고리 분류 (텍스트가 포함되어 있는지 매칭)
+        # 유연한 카테고리 매칭 (못 찾으면 무조건 pt_4 기타 탭으로)
         tab_id = 'pt_4' 
         for cat_key, html_id in pt_html_ids.items():
-            if cat_key != '기타' and (html_id in category_raw or cat_key in category_raw or category_raw in cat_key):
+            if cat_key in category_raw:
                 tab_id = html_id
                 break
                 
         unique_article_id = f"pt-article-{i}"
-
-        # 🌟 키 매핑 전면 수정: 'frequency_band', 'summary_ko' 적용
         freq_band = item.get('frequency_band', '').strip()
-        if not freq_band or freq_band == '-':
-            freq_band = '전 대역'
-            
+        if not freq_band or freq_band == '-': freq_band = '전 대역'
         summary_ko = item.get('summary_ko', item.get('summary_en', '내용 없음'))
 
-        # PolicyTracker <tr> 테이블 행 조립
         pt_trs[tab_id] += f"""
                     <tr class="item-row" onclick="openNewWindow('{unique_article_id}')">
                         <td class="col-band"><span class="badge">{freq_band}</span></td>
@@ -118,7 +94,6 @@ def build_dashboard():
                         <td class="col-date">{item.get('date', '')}</td>
                     </tr>"""
 
-        # 🌟 키 매핑 전면 수정: 'full_text_ko', 'full_text_en' 적용
         full_ko_content = item.get('full_text_ko', '내용 없음').replace('\n', '<br>')
         full_en_content = item.get('full_text_en', '내용 없음').replace('\n', '<br>')
 
@@ -139,15 +114,11 @@ def build_dashboard():
             </div>
         </div>"""
 
-    # PolicyTracker <tbody> 구역 일괄 주입
-    for cat_name, b_id in pt_html_ids.items():
+    for b_id in ['pt_0', 'pt_1', 'pt_2', 'pt_3', 'pt_4']:
         pattern = f'(id="{b_id}"[^>]*>.*?<tbody>)(.*?)(</tbody>)'
         safe_repl = r'\g<1>\n' + pt_trs[b_id].replace('\\', '\\\\') + r'\n                    \g<3>'
         html_content = re.sub(pattern, safe_repl, html_content, count=1, flags=re.DOTALL)
 
-    # ----------------------------------------------------------------
-    # 4. 팝업용 hidden-data 구역 완전 동적 재생성
-    # ----------------------------------------------------------------
     if 'id="hidden-data"' in html_content:
         hidden_pattern = r'(<div id="hidden-data"[^>]*>)(.*?)(</div>)'
         safe_hidden_repl = r'\g<1>\n' + hidden_divs_html.replace('\\', '\\\\') + r'\n</div>'
@@ -155,13 +126,10 @@ def build_dashboard():
     else:
         html_content = html_content.replace('</body>', f'<div id="hidden-data">\n{hidden_divs_html}\n</div>\n</body>')
 
-    # ----------------------------------------------------------------
-    # 5. 최종 index.html 파일 저장
-    # ----------------------------------------------------------------
     with open(HTML_FILE, 'w', encoding='utf-8') as f:
         f.write(html_content)
 
-    print(f"\n📊 [취합 완료] PolicyTracker 기사 {len(pt_data)}건의 테이블 및 팝업창(Hidden) 연동이 정상 완료되었습니다!")
+    print("\n📊 [완료] 대시보드 조립 완료!")
 
 if __name__ == "__main__":
     build_dashboard()
