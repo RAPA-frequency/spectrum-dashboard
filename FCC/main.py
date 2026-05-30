@@ -24,7 +24,7 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 # 파일 경로 설정
 JSON_FILE = 'fcc_data.json'
-HTML_FILE = 'index.html'
+HTML_FILE = 'fcc.html'
 
 def normalize_url(url):
     return url.strip().rstrip('/').lower() if url else ""
