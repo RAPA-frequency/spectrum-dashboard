@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: 1. 저장소 코드 체크아웃
-        uses: actions/checkout@v4.1.7 # 최신 패치 버전으로 상향
+        uses: actions/checkout@v4.1.7
 
       - name: 2. 파이썬 환경 설정 (Python 3.10)
-        uses: actions/setup-python@v5.1.1 # 최신 패치 버전으로 상향
+        uses: actions/setup-python@v5.1.1
         with:
           python-version: '3.10'
 
@@ -31,7 +31,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           cd FCC
-          python fcc.py
+          python fcc.py || (echo "❌ fcc.py 실행 중 에러 발생!" && exit 1)
           cd ..
 
       - name: 5. PolicyTracker 신규 데이터 수집
@@ -39,12 +39,12 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           cd PolicyTracker
-          python policy_scraper.py
+          python policy_scraper.py || (echo "❌ policy_scraper.py 실행 중 에러 발생!" && exit 1)
           cd ..
 
       - name: 6. 통합 마스터 빌드 스크립트 가동
         run: |
-          python build_dashboard.py
+          python build_dashboard.py || (echo "❌ build_dashboard.py 실행 중 에러 발생!" && exit 1)
 
       - name: 7. 업데이트된 데이터 및 메인 대시보드 커밋/푸시
         run: |
