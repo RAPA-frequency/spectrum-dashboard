@@ -14,9 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 1. Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v4
       - name: 2. Set up Python
-        uses: actions/setup-python@v5.3.0 
+        uses: actions/setup-python@v5
         with:
           python-version: '3.9' 
           
@@ -24,27 +24,27 @@ jobs:
         run: |
           pip install requests beautifulsoup4 openai lxml selenium webdriver-manager
 
-   #   - name: 4. Run FCC Scraper
-   #     env:
-   #       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-   #     run: |
-   #       cd FCC
-   #       python fcc.py
-   #       cd ..
+      - name: 4. Run FCC Scraper
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cd FCC
+          python fcc.py
+          cd ..
 
-    #  - name: 5. Run PolicyTracker Scraper
-    #    env:
-    #      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-    #    run: |
-    #      cd PolicyTracker
-    #      python policy_scraper.py
-    #      cd ..
+      - name: 5. Run PolicyTracker Scraper
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          cd PolicyTracker
+          python policy_scraper.py
+          cd ..
 
       - name: 6. Run Master Dashboard Builder
         run: |
           python build_dashboard.py
 
       - name: 7. Auto Commit and Push
-        uses: stefanzweifel/git-auto-commit-action@v5.1.0
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "🤖 [자동화] 데이터 수집 및 대시보드 통합 빌드 완료"
