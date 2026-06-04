@@ -166,14 +166,14 @@ def update_dashboard():
         translated = gpt_translate_all(title_en, summary_en, full_text_en)
 
         article_data = {
-            "url": url,                              # ✅ URL 필드 추가
+            "url": url,
             "title_en": title_en,
-            "title_ko": translated["title_ko"],
+            "title_ko": translated.get("title_ko", title_en),
             "date": date_raw,
             "summary_en": summary_en,
-            "summary_ko": translated["summary_ko"],
+            "summary_ko": translated.get("summary_ko", summary_en),
             "full_text_en": full_text_en,
-            "full_text_ko": translated["full_text_ko"]
+            "full_text_ko": translated.get("full_text_ko", full_text_en)
         }
         new_articles.append(article_data)
 
