@@ -182,6 +182,8 @@ def update_dashboard():
             "summary_ko": translated.get("summary_ko", summary_en),
             "full_text_en": full_text_en,
             "full_text_ko": translated.get("full_text_ko", full_text_en)
+            "category": translated.get("category", "3"),
+            "band": translated.get("band", "미분류")
         }
         new_articles.append(article_data)
 
