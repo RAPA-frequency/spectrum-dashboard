@@ -75,24 +75,24 @@ def build_dashboard():
     hidden_divs_html = ""
 
     for i, item in enumerate(pt_data):
-        category_raw = item.get('category', '').strip()
+        category_raw = str(item.get('category', '')).strip()
         
-        # 🌟 키워드 기반 5대 카테고리 정밀 분기 처리
-        if '위성' in category_raw or 'D2D' in category_raw or '통신국' in category_raw:
+        # 🌟 숫자 ID(0~3) 및 기존 키워드 기반 하이브리드 정밀 분류
+        if category_raw == '0' or '위성' in category_raw or 'D2D' in category_raw or '통신국' in category_raw:
             tab_id = 'pt_0'  # 위성통신 및 D2D
-        elif '이동통신' in category_raw or '5G' in category_raw or '6G' in category_raw or '시장' in category_raw:
+        elif category_raw == '1' or '이동통신' in category_raw or '5G' in category_raw or '6G' in category_raw or '시장' in category_raw:
             tab_id = 'pt_1'  # 차세대 이동통신
-        elif '공공' in category_raw or '산업망' in category_raw or '간섭' in category_raw or '관리' in category_raw:
+        elif category_raw == '2' or '공공' in category_raw or '산업망' in category_raw or '간섭' in category_raw or '관리' in category_raw:
             tab_id = 'pt_2'  # 공공·산업망 및 간섭
-        elif '정책' in category_raw or '법안' in category_raw or '글로벌' in category_raw:
+        elif category_raw == '3' or '정책' in category_raw or '법안' in category_raw or '글로벌' in category_raw:
             tab_id = 'pt_3'  # 글로벌 정책 및 법안
         else:
             tab_id = 'pt_4'  # 기타 및 미분류 사단
 
         unique_article_id = f"pt-article-{i}"
         
-        # 스크래퍼 변수명 매핑 보정 ('frequency_band', 'summary_ko')
-        freq_band = item.get('frequency_band', '').strip()
+        # 🌟 주파수 대역 키 이름 매핑 보정 ('band'와 'frequency_band' 둘 다 지원)
+        freq_band = item.get('band', item.get('frequency_band', '')).strip()
         if not freq_band or freq_band == '-': freq_band = '전 대역'
         summary_ko = item.get('summary_ko', item.get('summary_en', '내용 없음'))
 
