@@ -1,5 +1,14 @@
 [
   {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "글로벌스타 전송 신청서 접수 완료",
+    "title_en": "Globalstar Transfer Applications Accepted for Filing",
+    "summary": "FCC(미국 연방통신위원회)의 우주국(SB)은 Globalstar, Inc.와 Amazon.com, Inc. 간의 라이선스 및 권한 이전에 대한 신청이 초기 검토를 통해 접수 가능하다고 판단하였음을 발표했습니다. 이번 거래를 통해 Amazon은 Globalstar의 100% 지배권을 확보하게 되며, 이는 데이터 서비스의 향상, 긴급 통신 능력 강화 및 산업 데이터 서비스의 성장을 촉진할 것으로 기대됩니다. 또한, 두 기업의 결합은 모바일 위성 서비스 시장에 새로운 경쟁자를 도입하여 소비자 선택의 폭을 넓히고, 혁신과 일자리 창출에 기여할 것으로 보입니다.",
+    "date": "Jun 4, 2026",
+    "link": "https://www.fcc.gov/document/globalstar-transfer-applications-accepted-filing"
+  },
+  {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
     "title_ko": "FCC, 4년 만에 첫 주파수 경매 시작",
