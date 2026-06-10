@@ -197,7 +197,7 @@ def update_dashboard():
     generate_html_dashboard(db)
 
 # ==========================================
-# 5. HTML 목록형 대시보드 렌더링 (새 창 열기 버전 + 우측 카카오 애드핏)
+# 5. HTML 목록형 대시보드 렌더링 (새 창 열기 버전 + 카카오 애드핏 오클릭 방지 레이아웃)
 # ==========================================
 def generate_html_dashboard(db_data):
     rows_html = ""
@@ -247,13 +247,20 @@ def generate_html_dashboard(db_data):
         <title>PolicyTracker 동향 대시보드</title>
         <style>
             body {{ font-family: 'Malgun Gothic', sans-serif; background: #f4f6f9; padding: 30px; color: #333; margin: 0; }}
-            
-            /* 전체 레이아웃 (좌측 컨텐츠, 우측 광고) */
-            .main-wrapper {{ display: flex; justify-content: center; align-items: flex-start; gap: 30px; max-width: 1600px; margin: 0 auto; padding: 20px; }}
-            .container {{ flex: 1; max-width: 1200px; }}
-            .ad-sidebar {{ width: fit-content; display: flex; flex-direction: column; align-items: center; position: sticky; top: 40px; }}
+            .container {{ max-width: 1200px; margin: 0 auto; }}
+            h1 {{ color: #2c3e50; border-bottom: 3px solid #34495e; padding-bottom: 10px; margin-bottom: 20px; }}
 
-            h1 {{ color: #2c3e50; border-bottom: 3px solid #34495e; padding-bottom: 10px; margin-bottom: 30px; }}
+            /* 카카오 애드핏 광고 컨테이너 (오클릭 방지를 위한 안전 여백 확보) */
+            .ad-container {{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 10px 0 40px 0; /* 테이블(클릭 요소)과의 거리를 40px로 넓게 확보 */
+                padding: 15px;
+                background-color: #ffffff; /* 시각적 분리를 위해 흰색 배경 추가 */
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+            }}
 
             table {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }}
             th, td {{ padding: 15px 20px; border-bottom: 1px solid #e2e8f0; text-align: left; }}
@@ -280,30 +287,29 @@ def generate_html_dashboard(db_data):
         </script>
     </head>
     <body>
-        <div class="main-wrapper">
-            <div class="container">
-                <h1>📡 주파수 정책 동향(PolicyTracker)</h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="col-date">발행일</th>
-                            <th class="col-title">기사 제목 (클릭하면 새 창에서 열립니다)</th>
-                            <th class="col-summary">핵심 요약</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {rows_html}
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="ad-sidebar">
+        <div class="container">
+            <h1>📡 주파수 정책 동향(PolicyTracker)</h1>
+            
+            <div class="ad-container">
                 <ins class="kakao_ad_area" style="display:none;"
                 data-ad-unit = "DAN-4GYlWJwPmzSgEzRz"
                 data-ad-width = "728"
                 data-ad-height = "90"></ins>
                 <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
             </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th class="col-date">발행일</th>
+                        <th class="col-title">기사 제목 (클릭하면 새 창에서 열립니다)</th>
+                        <th class="col-summary">핵심 요약</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {rows_html}
+                </tbody>
+            </table>
         </div>
 
         <div id="hidden-data">
