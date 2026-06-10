@@ -197,7 +197,7 @@ def update_dashboard():
     generate_html_dashboard(db)
 
 # ==========================================
-# 5. HTML 목록형 대시보드 렌더링 (새 창 열기 버전)
+# 5. HTML 목록형 대시보드 렌더링 (새 창 열기 버전 + 우측 카카오 애드핏)
 # ==========================================
 def generate_html_dashboard(db_data):
     rows_html = ""
@@ -246,8 +246,13 @@ def generate_html_dashboard(db_data):
         <meta charset="utf-8">
         <title>PolicyTracker 동향 대시보드</title>
         <style>
-            body {{ font-family: 'Malgun Gothic', sans-serif; background: #f4f6f9; padding: 30px; color: #333; }}
-            .container {{ max-width: 1200px; margin: 0 auto; }}
+            body {{ font-family: 'Malgun Gothic', sans-serif; background: #f4f6f9; padding: 30px; color: #333; margin: 0; }}
+            
+            /* 전체 레이아웃 (좌측 컨텐츠, 우측 광고) */
+            .main-wrapper {{ display: flex; justify-content: center; align-items: flex-start; gap: 30px; max-width: 1600px; margin: 0 auto; padding: 20px; }}
+            .container {{ flex: 1; max-width: 1200px; }}
+            .ad-sidebar {{ width: fit-content; display: flex; flex-direction: column; align-items: center; position: sticky; top: 40px; }}
+
             h1 {{ color: #2c3e50; border-bottom: 3px solid #34495e; padding-bottom: 10px; margin-bottom: 30px; }}
 
             table {{ width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }}
@@ -275,20 +280,30 @@ def generate_html_dashboard(db_data):
         </script>
     </head>
     <body>
-        <div class="container">
-            <h1>📡 주파수 정책 동향(PolicyTracker)</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th class="col-date">발행일</th>
-                        <th class="col-title">기사 제목 (클릭하면 새 창에서 열립니다)</th>
-                        <th class="col-summary">핵심 요약</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {rows_html}
-                </tbody>
-            </table>
+        <div class="main-wrapper">
+            <div class="container">
+                <h1>📡 주파수 정책 동향(PolicyTracker)</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="col-date">발행일</th>
+                            <th class="col-title">기사 제목 (클릭하면 새 창에서 열립니다)</th>
+                            <th class="col-summary">핵심 요약</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {rows_html}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="ad-sidebar">
+                <ins class="kakao_ad_area" style="display:none;"
+                data-ad-unit = "DAN-4GYlWJwPmzSgEzRz"
+                data-ad-width = "728"
+                data-ad-height = "90"></ins>
+                <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+            </div>
         </div>
 
         <div id="hidden-data">
