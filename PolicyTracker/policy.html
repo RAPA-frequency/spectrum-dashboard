@@ -8,6 +8,18 @@
             .container { max-width: 1200px; margin: 0 auto; }
             h1 { color: #2c3e50; border-bottom: 3px solid #34495e; padding-bottom: 10px; margin-bottom: 30px; }
 
+            /* 카카오 애드핏 광고 컨테이너 (오클릭 방지를 위한 안전 여백 확보) */
+            .ad-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0 40px 0; /* 테이블(클릭 요소)과의 거리를 40px로 넓게 확보 */
+            padding: 15px;
+            background-color: #ffffff; /* 시각적 분리를 위해 흰색 배경 추가 */
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            }
+
             table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
             th, td { padding: 15px 20px; border-bottom: 1px solid #e2e8f0; text-align: left; }
             th { background-color: #34495e; color: white; font-size: 1.05em; }
@@ -35,6 +47,15 @@
     <body>
         <div class="container">
             <h1>📡 주파수 정책 동향(PolicyTracker)</h1>
+
+            <div class="ad-container">
+            <ins class="kakao_ad_area" style="display:none;"
+            data-ad-unit = "DAN-4GYlWJwPmzSgEzRz"
+            data-ad-width = "728"
+            data-ad-height = "90"></ins>
+            <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+        </div>
+            
             <table>
                 <thead>
                     <tr>
@@ -280,13 +301,6 @@
         
                 </tbody>
             </table>
-        </div>
-        <div class="ad-sidebar">
-            <ins class="kakao_ad_area" style="display:none;"
-            data-ad-unit = "DAN-4GYlWJwPmzSgEzRz"
-            data-ad-width = "728"
-            data-ad-height = "90"></ins>
-            <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
         </div>
     </div>
         <div id="hidden-data">
