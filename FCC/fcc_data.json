@@ -2,6 +2,33 @@
   {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
+    "title_ko": "OET, SmartAuger, Inc.의 면제 요청 승인",
+    "title_en": "OET Grants SmartAuger, Inc.'s Request for Waiver",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SmartAuger, Inc.의 요청을 수용하여, 해당 회사의 초광대역(UWB) 지하 탐지 레이더(GPR) 장비에 대한 규제 면제를 승인했습니다. 이 장비는 170-670 MHz 대역에서 작동하며, 지하 유틸리티를 실시간으로 탐지하고 시각화하는 기능을 갖추고 있습니다. SmartAuger는 이 장비가 기존 규정의 즉각적인 대역폭 요건을 충족하지 않지만, 안전한 작업 환경을 제공하고 지하 시설 손상을 줄일 수 있는 잠재력을 가지고 있다고 주장하였습니다. 따라서 FCC는 공공의 이익을 고려하여 면제를 승인하며, 장비의 인증 및 운영에 대한 특정 조건을 부여했습니다.",
+    "date": "Jun 16, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-smartauger-incs-request-waiver"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, SZ DJI Technology Co., Ltd.의 Ex Parte 제출에 대한 의견 연장",
+    "title_en": "OET Extends Comment on SZ DJI Technology Co., Ltd. Ex Parte Filing",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SZ DJI Technology Co., LTD.(DJI)의 최근 ex parte 제출에 대한 의견 제출 기회를 제공하고 있습니다. DJI는 2026년 1월 21일 공공안전 및 국가안보국의 Covered List 수정에 대한 재고 요청을 제출하였으며, 이에 따라 DJI의 통신 및 비디오 감시 장비가 규제 대상에 포함되었습니다. OET는 DJI의 보안 평가에 대한 의견을 수렴하기 위해 2026년 8월 28일까지 공개 의견 제출을 요청하며, 모든 제출물은 ET Docket No. 26-22를 참조해야 합니다. 이 조치는 DJI의 장비가 Covered List에 포함되지 않아야 한다는 주장을 뒷받침하기 위한 것입니다.",
+    "date": "Jun 16, 2026",
+    "link": "https://www.fcc.gov/document/oet-extends-comment-sz-dji-technology-co-ltd-ex-parte-filing"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 구디이어의 면제 요청에 대한 의견 요청",
+    "title_en": "OET Seeks Comment on Goodyear's Request for Waiver",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Goodyear Tire and Rubber Company가 요청한 규정 제15.231(e)의 면제에 대한 의견을 구합니다. Goodyear는 자사의 타이어 장착 센서 시스템인 \"SightLine\"의 초기 데이터 수집을 위해 빈번한 전송이 필요하다고 주장하며, 이를 통해 차량의 타이어 상태와 안전 경고를 신속하게 제공할 수 있다고 설명했습니다. 이 면제가 승인될 경우, 타이어의 위험 상태를 조기에 감지하고 차량의 안전성과 성능을 향상시키는 데 기여할 것으로 기대됩니다. 따라서, 관련 이해관계자들은 제안된 면제 요청에 대한 의견을 제출할 수 있습니다.",
+    "date": "Jun 16, 2026",
+    "link": "https://www.fcc.gov/document/oet-seeks-comment-goodyears-request-waiver"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
     "title_ko": "캐리, 허위 결과를 초래한 시험실에 대한 조치 발표",
     "title_en": "Carr Announces Action Against Test Lab Responsible for False Results",
     "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 최근 허위 테스트 결과를 제출한 테스트 실험소에 대한 인정을 철회하는 절차를 시작했습니다. 이는 SLG-CPC Test Laboratory Co., Ltd.가 다른 보고서에서 복사한 데이터를 포함한 여러 허위 테스트 보고서를 제출한 사실을 인정했기 때문입니다. FCC는 이러한 조치를 통해 장비 인증 시스템의 신뢰성을 유지하고, 미국 통신 네트워크의 안전을 확보하기 위한 노력을 지속할 것임을 밝혔습니다. 또한, FCC는 외국 적대국이 소유하거나 통제하는 테스트 실험소의 인정을 금지하는 규정을 도입하여, 총 23개의 부적합한 실험소에 대한 인정을 철회한 바 있습니다.",
