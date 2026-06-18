@@ -1,5 +1,14 @@
 [
   {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "WTB, GME의 Part 95 GMRS 규정 면제 요청에 대한 의견 요청",
+    "title_en": "WTB Seeks Comment on GME Request to Waiver Part 95 GMRS Rules",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 GME Pty Ltd가 제출한 GMRS(일반 이동 무선 서비스) 규정 면제 요청에 대한 의견을 구합니다. GME는 462/467 MHz 대역에서의 데이터 전송 및 위치 공유를 허용하기 위해 세 가지 규정의 면제를 요청하며, 이는 특히 오프로드 및 외딴 지역에서의 안전 기능을 향상시키는 데 기여할 것으로 기대됩니다. GME는 또한 다른 사용자와의 간섭을 방지하기 위한 여러 안전 장치를 제안하고 있으며, 이 요청에 대한 의견 제출 마감일은 2026년 7월 17일입니다.",
+    "date": "Jun 17, 2026",
+    "link": "https://www.fcc.gov/document/wtb-seeks-comment-gme-request-waiver-part-95-gmrs-rules"
+  },
+  {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
     "title_ko": "OET, SmartAuger, Inc.의 면제 요청 승인",
