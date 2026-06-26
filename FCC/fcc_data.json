@@ -2,6 +2,15 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "WTB, ACF를 위한 성과 계획 템플릿 채택",
+    "title_en": "WTB Adopts Performance Plan Template for the ACF",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 알래스카 연결 기금(ACF) 성과 계획 제출을 위한 성과 계획 템플릿을 채택했습니다. 이 템플릿은 알래스카의 농촌 및 외딴 지역에서의 모바일 음성 및 브로드밴드 서비스 제공에 따른 고유한 도전 과제를 해결하기 위한 노력의 일환으로 개발되었습니다. 모바일 제공업체는 2026년 9월 1일까지 성과 계획을 제출해야 하며, ACF 지원은 2027년 1월 1일부터 시작될 예정입니다. 또한, 제공업체는 자발적으로 추가적인 헥스-9 지역을 성과 계획에 포함할 수 있으며, 템플릿의 제출 과정에서 데이터 검증을 통해 정확성을 높일 수 있도록 조치할 것입니다.",
+    "date": "Jun 25, 2026",
+    "link": "https://www.fcc.gov/document/wtb-adopts-performance-plan-template-acf"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "WTB, GME의 Part 95 GMRS 규정 면제 요청에 대한 의견 요청",
     "title_en": "WTB Seeks Comment on GME Request to Waiver Part 95 GMRS Rules",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 GME Pty Ltd가 제출한 GMRS(일반 이동 무선 서비스) 규정 면제 요청에 대한 의견을 구합니다. GME는 462/467 MHz 대역에서의 데이터 전송 및 위치 공유를 허용하기 위해 세 가지 규정의 면제를 요청하며, 이는 특히 오프로드 및 외딴 지역에서의 안전 기능을 향상시키는 데 기여할 것으로 기대됩니다. GME는 또한 다른 사용자와의 간섭을 방지하기 위한 여러 안전 장치를 제안하고 있으며, 이 요청에 대한 의견 제출 마감일은 2026년 7월 17일입니다.",
