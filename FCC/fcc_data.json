@@ -2,6 +2,33 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "FCC, 성공적인 무선 경매에서 낙찰자 발표",
+    "title_en": "FCC Announces Winning Bidders in Successful Wireless Auction",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)과 경제분석국(OEA)은 2026년 6월 23일에 종료된 제113차 경매의 결과를 발표했습니다. 이번 경매에서는 총 200개의 라이선스가 낙찰되었으며, 총 입찰액은 약 35억 7천만 달러에 달했습니다. 낙찰자들은 2026년 7월 13일까지 계약금과 FCC 양식 601 및 602를 제출해야 하며, 최종 지급은 7월 27일까지 완료해야 합니다. 이러한 조치는 고급 무선 서비스의 활성화를 통해 통신 시장의 경쟁력을 높이고, 새로운 기술 도입을 촉진하기 위한 것입니다.",
+    "date": "Jun 26, 2026",
+    "link": "https://www.fcc.gov/document/fcc-announces-winning-bidders-successful-wireless-auction"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 아카디안 테크놀로지 코퍼레이션에 면제 부여",
+    "title_en": "OET Grants Arcadyan Technology Corporation Waiver",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Arcadyan Technology Corporation의 요청을 수용하여, 외국에서 생산된 소비자용 라우터에 대해 Class I 및 Class II 허용 하드웨어 변경을 허용하는 면제를 1년간 부여하기로 결정했습니다. 이는 공급망 부족으로 인한 브로드밴드 장비의 공급 중단을 방지하기 위한 조치로, 해당 변경이 성능이나 기능을 개선하지 않으며, 미국산 부품과 외국산 부품의 교체를 포함하지 않는다는 조건을 충족합니다. 따라서, 이 면제는 2027년 6월 26일까지 유효하며, 다른 하드웨어 수정에 대한 규제는 여전히 적용됩니다.",
+    "date": "Jun 26, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-arcadyan-technology-corporation-waiver"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 버라이즌 커뮤니케이션즈 Inc.의 면제 요청 승인",
+    "title_en": "OET Grants Verizon Communications Inc. Waiver Request",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Verizon Communications Inc.의 요청을 수용하여, 외국에서 생산된 소비자용 라우터에 대해 Class I 및 Class II 허용 하드웨어 변경을 허용하는 면제를 부여했습니다. 이 조치는 공급망 부족으로 인한 부품 교체 필요성을 해결하기 위한 것으로, broadband 장비의 공급 중단을 방지하고 공공의 이익을 도모하기 위해 시행됩니다. 면제는 2027년 6월 26일까지 유효하며, 해당 변경이 기존 장비의 성능이나 기능을 개선하지 않도록 제한하고 있습니다.",
+    "date": "Jun 26, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-verizon-communications-inc-waiver-request"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "WTB, ACF를 위한 성과 계획 템플릿 채택",
     "title_en": "WTB Adopts Performance Plan Template for the ACF",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 알래스카 연결 기금(ACF) 성과 계획 제출을 위한 성과 계획 템플릿을 채택했습니다. 이 템플릿은 알래스카의 농촌 및 외딴 지역에서의 모바일 음성 및 브로드밴드 서비스 제공에 따른 고유한 도전 과제를 해결하기 위한 노력의 일환으로 개발되었습니다. 모바일 제공업체는 2026년 9월 1일까지 성과 계획을 제출해야 하며, ACF 지원은 2027년 1월 1일부터 시작될 예정입니다. 또한, 제공업체는 자발적으로 추가적인 헥스-9 지역을 성과 계획에 포함할 수 있으며, 템플릿의 제출 과정에서 데이터 검증을 통해 정확성을 높일 수 있도록 조치할 것입니다.",
