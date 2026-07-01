@@ -2,6 +2,15 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "위원장, 주요 중주파수 대역 경매 계획 발표",
+    "title_en": "Chairman Announces Plan for a Big Auction of Prime Mid-Band Spectrum",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 2027년 상반기 중 160메가헤르츠의 상부 C-밴드 스펙트럼 경매를 위한 결의안을 오는 7월 22일 회의에서 투표할 예정입니다. 이 경매는 미국의 차세대 무선 통신을 선도하기 위한 중요한 조치로, 기존 위성 서비스와 항공 안전 시스템의 원활한 공존을 보장하며, 소비자에게는 더 낮은 가격과 빠른 속도의 무선 서비스를 제공할 것입니다. FCC는 이 경매를 통해 수십억 달러의 수익을 창출할 것으로 예상하고 있으며, 2030년까지 대부분의 미국인들이 상부 C-밴드 서비스를 이용할 수 있도록 할 계획입니다.",
+    "date": "Jun 30, 2026",
+    "link": "https://www.fcc.gov/document/chairman-announces-plan-big-auction-prime-mid-band-spectrum-0"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "FCC, 성공적인 무선 경매에서 낙찰자 발표",
     "title_en": "FCC Announces Winning Bidders in Successful Wireless Auction",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)과 경제분석국(OEA)은 2026년 6월 23일에 종료된 제113차 경매의 결과를 발표했습니다. 이번 경매에서는 총 200개의 라이선스가 낙찰되었으며, 총 입찰액은 약 35억 7천만 달러에 달했습니다. 낙찰자들은 2026년 7월 13일까지 계약금과 FCC 양식 601 및 602를 제출해야 하며, 최종 지급은 7월 27일까지 완료해야 합니다. 이러한 조치는 고급 무선 서비스의 활성화를 통해 통신 시장의 경쟁력을 높이고, 새로운 기술 도입을 촉진하기 위한 것입니다.",
