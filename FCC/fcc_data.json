@@ -2,6 +2,33 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "T-Mobile-그레인 신청 승인 명령",
+    "title_en": "Order Granting T-Mobile-Grain Applications",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 T-Mobile USA, Inc.와 Grain Management, LLC 간의 스펙트럼 라이센스 양도에 대한 신청을 승인했습니다. 이번 결정은 800 MHz 라이센스를 T-Mobile에서 Grain으로, 600 MHz 라이센스를 Grain에서 T-Mobile로 교환하는 것으로, 이는 스펙트럼의 보다 효율적인 활용을 통해 미국 국민에게 혜택을 제공하기 위한 조치입니다. 또한, Grain이 스펙트럼을 비축하지 않고 신속하게 활용하도록 엄격한 조건을 부과하며, D2D 서비스와 같은 새로운 서비스 제공을 촉진하기 위한 인센티브도 포함되어 있습니다. 이로써, FCC는 미국의 무선 및 차세대 기술 분야에서의 리더십을 강화하는 방향으로 나아가고 있습니다.",
+    "date": "Jul 1, 2026",
+    "link": "https://www.fcc.gov/document/order-granting-t-mobile-grain-applications"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "캐리 위원장, 위험한 장비 규제 강화 제안",
+    "title_en": "Chairman Carr Proposes to Strengthen Rules Governing Dangerous Gear",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 전자 기기에 대한 감독을 강화하고 미국 국민을 불안전한 장비로부터 보호하기 위한 새로운 규칙을 제안했습니다. 이번 결정은 규제 대상 목록(Covered List)에 포함된 기업이 생산한 완제품뿐만 아니라 구성 부품에 대해서도 금지 조치를 확대하며, 전자상거래 플랫폼이 FCC 인증 장비를 마케팅하거나 판매할 때 FCC ID를 표시하도록 요구합니다. 이러한 조치는 미국의 국가 안보를 보호하고 소비자에게 더 나은 정보 제공을 통해 안전한 장비 사용을 촉진하기 위한 것입니다. 추가적으로, FCC는 장비 인증 규칙을 현대화하기 위한 다양한 방안을 제안하고 있으며, 이는 공급망 공개 확대 및 자가 인증 절차의 감독 강화를 포함합니다.",
+    "date": "Jul 1, 2026",
+    "link": "https://www.fcc.gov/document/chairman-carr-proposes-strengthen-rules-governing-dangerous-gear"
+  },
+  {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "FCC, 우주국 절차 가속화에 대한 획기적인 투표 예정",
+    "title_en": "FCC Will Vote on Groundbreaking Acceleration of Space Bureau Process",
+    "summary": "FCC(미국 연방통신위원회)의 우주국(Space Bureau)은 위성 및 지구국 라이센스 절차를 혁신적으로 가속화하는 방안을 제안하였습니다. 이 '우주 현대화 명령'은 라이센스 신청 과정을 일관되고 예측 가능한 조립 라인 방식으로 전환하여, 미국의 우주 경제를 지원하고 우주 기반 브로드밴드의 확산을 촉진할 것입니다. 이를 통해 FCC는 신청 처리 속도를 높이고, 기업에 대한 예측 가능성을 제공하며, 우주 혁신가들을 위한 새로운 도구를 마련할 예정입니다. 이러한 조치는 미국이 우주 산업의 선두주자로 자리매김하는 데 중요한 역할을 할 것입니다.",
+    "date": "Jul 1, 2026",
+    "link": "https://www.fcc.gov/document/fcc-will-vote-groundbreaking-acceleration-space-bureau-process"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "위원장, 주요 중주파수 대역 경매 계획 발표",
     "title_en": "Chairman Announces Plan for a Big Auction of Prime Mid-Band Spectrum",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 2027년 상반기 중 160메가헤르츠의 상부 C-밴드 스펙트럼 경매를 위한 결의안을 오는 7월 22일 회의에서 투표할 예정입니다. 이 경매는 미국의 차세대 무선 통신을 선도하기 위한 중요한 조치로, 기존 위성 서비스와 항공 안전 시스템의 원활한 공존을 보장하며, 소비자에게는 더 낮은 가격과 빠른 속도의 무선 서비스를 제공할 것입니다. FCC는 이 경매를 통해 수십억 달러의 수익을 창출할 것으로 예상하고 있으며, 2030년까지 대부분의 미국인들이 상부 C-밴드 서비스를 이용할 수 있도록 할 계획입니다.",
