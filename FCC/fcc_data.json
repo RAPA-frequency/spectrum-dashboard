@@ -2,6 +2,24 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "FCC, SLTT 드론 노력 지원",
+    "title_en": "FCC Supports SLTT Drone Efforts",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SAFER SKIES 법안의 시행을 지원하기 위해 신속한 조치를 취하였습니다. 이번 조치는 주, 지방, 부족 및 영토 법 집행 기관이 드론 위협에 효과적으로 대응할 수 있도록 법적 권한을 명확히 하고, 관련 장비의 판매 및 수입을 허용하는 면제를 포함합니다. 또한, FCC는 이러한 기관들이 드론 신호 방해 작업을 수행할 수 있도록 임시 주파수 권한을 부여하고, 드론 기술의 시험 및 사용에 대한 법적 확실성을 제공하여 공공 안전을 강화하는 데 기여하고자 합니다. 이러한 조치는 범죄자 및 적대적 세력으로부터의 위협에 대응하기 위한 연방 차원의 협력적 노력을 지원합니다.",
+    "date": "Jul 2, 2026",
+    "link": "https://www.fcc.gov/document/fcc-supports-sltt-drone-efforts"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "FCC, SLTT 드론 노력 지원",
+    "title_en": "FCC Supports SLTT Drone Efforts",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SAFER SKIES 법안의 시행을 지원하기 위해 신속한 조치를 취했습니다. 이번 조치는 주, 지방, 부족 및 영토 법 집행 기관이 드론 위협에 효과적으로 대응할 수 있도록 법적 권한을 명확히 하고, 반드론 장비의 판매 및 수입을 허용하는 규제를 면제하는 등의 내용을 포함하고 있습니다. 또한, FCC는 SLTT 법 집행 기관이 반드론 기술을 시험하고 운영할 수 있도록 임시 주파수 권한을 부여하며, 이들이 법적 책임 없이 신호 방해 작업을 수행할 수 있도록 명확히 하였습니다. 이러한 조치는 미국 내 공공 안전을 강화하고, 드론으로 인한 위협에 대응하기 위한 연방 차원의 협력 노력을 지원하는 중요한 조치입니다.",
+    "date": "Jul 2, 2026",
+    "link": "https://www.fcc.gov/document/fcc-supports-sltt-drone-efforts"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "T-Mobile-그레인 신청 승인 명령",
     "title_en": "Order Granting T-Mobile-Grain Applications",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 T-Mobile USA, Inc.와 Grain Management, LLC 간의 스펙트럼 라이센스 양도에 대한 신청을 승인했습니다. 이번 결정은 800 MHz 라이센스를 T-Mobile에서 Grain으로, 600 MHz 라이센스를 Grain에서 T-Mobile로 교환하는 것으로, 이는 스펙트럼의 보다 효율적인 활용을 통해 미국 국민에게 혜택을 제공하기 위한 조치입니다. 또한, Grain이 스펙트럼을 비축하지 않고 신속하게 활용하도록 엄격한 조건을 부과하며, D2D 서비스와 같은 새로운 서비스 제공을 촉진하기 위한 인센티브도 포함되어 있습니다. 이로써, FCC는 미국의 무선 및 차세대 기술 분야에서의 리더십을 강화하는 방향으로 나아가고 있습니다.",
