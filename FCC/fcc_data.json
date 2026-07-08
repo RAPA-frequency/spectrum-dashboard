@@ -2,6 +2,24 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "WTB와 SB, AMS(R)S 송수신기용 EMS 면제 요청에 대한 의견 요청",
+    "title_en": "WTB and SB Seek Comment on EMS Waiver Request for AMS(R)S Transceivers",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB) 및 우주국은 EMS Technologies Canada, Ltd.가 제출한 면제 요청에 대한 의견을 구하고 있습니다. EMS는 자사의 항공 이동 위성 서비스(Aeronautical Mobile Satellite Service) 송신기에 대한 면제를 요청하며, 이는 최신 기술 사양에 부합하는 장비 인증을 가능하게 할 것으로 기대하고 있습니다. EMS는 해당 면제가 공공의 이익에 기여하고, 현대 항공의 요구를 충족시키는 데 필요한 SB-S 서비스의 지속적인 개발과 배포를 지원할 것이라고 주장하고 있습니다. 이에 따라, 관련 이해관계자들은 의견을 제출할 수 있으며, 이는 FCC의 전자 의견 제출 시스템을 통해 가능하다고 안내하고 있습니다.",
+    "date": "Jul 7, 2026",
+    "link": "https://www.fcc.gov/document/wtb-and-sb-seek-comment-ems-waiver-request-amsrs-transceivers"
+  },
+  {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "WTB와 SB, AMS(R)S 송수신기용 EMS 면제 요청에 대한 의견 요청",
+    "title_en": "WTB and SB Seek Comment on EMS Waiver Request for AMS(R)S Transceivers",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)과 우주국은 EMS Technologies Canada, Ltd.의 요청에 대한 의견을 구하고 있습니다. EMS는 자사의 항공 이동 위성 서비스(Aeronautical Mobile Satellite Service) 송수신기 모델인 Aspire 400-4 및 향후 모델에 대해 규정 제25.109(c) 및 제87.131, 87.133, 87.137, 87.139(i)(1), 87.141(j)의 면제를 요청하고 있으며, 이는 현대 항공 통신의 요구를 충족시키기 위한 조치입니다. EMS는 이러한 면제가 공공의 이익에 기여할 것이라고 주장하며, SB-S 서비스의 지속적인 개발과 배치를 지원할 것이라고 밝혔습니다. 의견 제출 마감일은 2026년 7월 28일이며, 후속 의견은 8월 7일까지 제출할 수 있습니다.",
+    "date": "Jul 7, 2026",
+    "link": "https://www.fcc.gov/document/wtb-and-sb-seek-comment-ems-waiver-request-amsrs-transceivers"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "WTB, ACF를 위한 초기 EA 맵 최종 버전 1.3 발표",
     "title_en": "WTB publishes final version of the Initial EA Map, v.1.3, for the ACF",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 알래스카 연결 기금(ACF)의 모바일 초기 적격 지역 맵(버전 1.3)을 발표했습니다. 이 맵은 알래스카 플랜과 ACF 간의 차이를 명확히 하며, ACF는 헥사곤 9(해상도 9) 수준의 지리적 약속을 요구하여 미국 내 거주, 근무 및 이동하는 지역에 대한 커버리지를 보장합니다. 제공업체는 이 맵을 기반으로 2026년 9월 1일까지 초기 ACF 성과 계획을 제출해야 하며, ACF 지원을 유지하기 위해서는 새로 비적격 지역으로 지정된 헥사곤 9를 다른 지역에서 커버해야 합니다. 향후 WTB는 제공업체의 요청에 따라 적격 지역 맵을 업데이트할 예정입니다.",
