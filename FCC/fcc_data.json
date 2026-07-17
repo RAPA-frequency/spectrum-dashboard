@@ -2,6 +2,15 @@
   {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
+    "title_ko": "공학 및 기술국, ET 문서 번호 26-169 설정",
+    "title_en": "Office of Engineering and Technology Establishes ET Docket No. 26-169",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 ET Docket No. 26-169을 설정하였으며, 이는 \"기기 직접 연결을 위한 비면허 주파수 활용\"을 주제로 하고 있습니다. 이 절차는 비공식적인 발표에 대해 '허가하되 공개'하는 규정을 따르며, 발표 후 2영업일 이내에 서면 발표 또는 구두 발표 요약을 제출해야 합니다. 본 정책은 비면허 주파수의 활용을 통해 기기 간 직접 연결을 촉진하고, 통신 시장의 혁신을 도모하기 위한 조치입니다.",
+    "date": "Jul 16, 2026",
+    "link": "https://www.fcc.gov/document/office-engineering-and-technology-establishes-et-docket-no-26-169"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
     "title_ko": "FCC, 면허 없는 기기를 위한 직접 연결 방안 검토 예정",
     "title_en": "FCC to Consider Direct-to-Device Connectivity for Unlicensed Devices",
     "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 혁신적인 면허 없는 무선 장치가 위성과 직접 통신할 수 있는 새로운 방안을 모색하는 절차를 제안했습니다. 이 제안은 225메가헤르츠 이상의 면허 없는 스펙트럼을 활용하여 직접 장치 간 서비스(D2D)의 용량 요구를 지원하고, FCC의 15부 규정에 따라 승인된 장비가 우주선 내에서 사용될 수 있음을 명확히 할 예정입니다. 이러한 조치는 소비자에게 보다 빠르고 광범위한 연결성을 제공하고, 면허 없는 장치 생태계와의 결합을 통해 새로운 서비스 개발을 촉진할 것으로 기대됩니다. FCC는 이 제안이 우주 경제를 지원하고 혁신의 기회를 열어줄 것이라고 밝혔습니다.",
