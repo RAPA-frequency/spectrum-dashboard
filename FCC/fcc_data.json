@@ -2,6 +2,24 @@
   {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
+    "title_ko": "FCC, 특정 장비의 수입 및 판매 금지 제안",
+    "title_en": "FCC Proposes to Prohibit Import, Marketing of Covered Equipment",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET) 및 공공안전 및 국토안보국(PSHSB)은 특정 외국산 무인항공기 시스템(UAS) 및 관련 장비의 수입 및 마케팅을 금지하는 방안을 제안하였습니다. 이는 해당 장비가 미국의 국가안보 및 개인 안전에 심각한 위험을 초래한다고 판단된 데 따른 조치입니다. 이 금지는 연방 정부의 사용이나 상업적 테스트 및 제품 개발을 위한 수입에는 적용되지 않지만, 이미 구매한 장비의 사용에는 영향을 미치지 않습니다. FCC는 이러한 제안에 대한 의견을 수렴하고 있으며, 국가안보 및 경제적 고려사항을 포함한 다양한 요인을 검토할 예정입니다.",
+    "date": "Jul 17, 2026",
+    "link": "https://www.fcc.gov/document/fcc-proposes-prohibit-import-marketing-covered-equipment"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 아이신 코퍼레이션의 면제 요청에 대한 의견 요청",
+    "title_en": "OET Seeks Comment On Aisin Corporation's Waiver Request",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Aisin Corporation의 요청에 대한 의견을 구하고 있습니다. Aisin은 자사의 초광대역(UWB) 모션 센서가 7.6-8.4 GHz 대역에서 작동할 수 있도록 규정 제15.519(a) 및 제15.519(a)(2)의 면제를 요청하고 있으며, 이는 차량 내에서 인간의 제스처와 동작을 감지하는 데 사용될 예정입니다. Aisin은 이 센서가 저전력 신호를 방출하여 기존의 규정을 준수하며, 공공 안전을 향상시킬 수 있는 잠재력을 가지고 있다고 주장하고 있습니다. 이에 따라 FCC는 Aisin의 면제 요청에 대한 의견을 수렴할 계획입니다.",
+    "date": "Jul 17, 2026",
+    "link": "https://www.fcc.gov/document/oet-seeks-comment-aisin-corporations-waiver-request"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
     "title_ko": "공학 및 기술국, ET 문서 번호 26-169 설정",
     "title_en": "Office of Engineering and Technology Establishes ET Docket No. 26-169",
     "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 ET Docket No. 26-169을 설정하였으며, 이는 \"기기 직접 연결을 위한 비면허 주파수 활용\"을 주제로 하고 있습니다. 이 절차는 비공식적인 발표에 대해 '허가하되 공개'하는 규정을 따르며, 발표 후 2영업일 이내에 서면 발표 또는 구두 발표 요약을 제출해야 합니다. 본 정책은 비면허 주파수의 활용을 통해 기기 간 직접 연결을 촉진하고, 통신 시장의 혁신을 도모하기 위한 조치입니다.",
