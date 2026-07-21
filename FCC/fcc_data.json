@@ -2,6 +2,15 @@
   {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
+    "title_ko": "OET 기관, SGS-CSTC 심천의 인정을 철회하기로 진행 중",
+    "title_en": "OET Institutes Proceeding to Withdraw Recognition of SGS-CSTC Shenzhen",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SGS-CSTC Standards Technical Services Co. Ltd. Shenzhen Branch(CN1336)에 대한 인증 실험실 지위를 철회하기 위한 절차를 시작한다고 발표했습니다. 이는 해당 실험실이 금지된 외국 기관의 지배를 받고 있다는 이유로, FCC의 규정에 따라 이루어진 조치입니다. SGS-CSTC Shenzhen은 중국 정부와의 관계로 인해 FCC의 기준을 충족하지 못하고 있으며, 이에 따라 35일 이내에 반박할 기회를 부여받았습니다. 이 결정은 미국의 국가 안보를 보호하기 위한 조치로, 실험실의 소유 및 운영 구조에 대한 철저한 검토가 필요합니다.",
+    "date": "Jul 20, 2026",
+    "link": "https://www.fcc.gov/document/oet-institutes-proceeding-withdraw-recognition-sgs-cstc-shenzhen"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
     "title_ko": "FCC, 특정 장비의 수입 및 판매 금지 제안",
     "title_en": "FCC Proposes to Prohibit Import, Marketing of Covered Equipment",
     "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET) 및 공공안전 및 국토안보국(PSHSB)은 특정 외국산 무인항공기 시스템(UAS) 및 관련 장비의 수입 및 마케팅을 금지하는 방안을 제안하였습니다. 이는 해당 장비가 미국의 국가안보 및 개인 안전에 심각한 위험을 초래한다고 판단된 데 따른 조치입니다. 이 금지는 연방 정부의 사용이나 상업적 테스트 및 제품 개발을 위한 수입에는 적용되지 않지만, 이미 구매한 장비의 사용에는 영향을 미치지 않습니다. FCC는 이러한 제안에 대한 의견을 수렴하고 있으며, 국가안보 및 경제적 고려사항을 포함한 다양한 요인을 검토할 예정입니다.",
