@@ -1,5 +1,23 @@
 [
   {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, NTCA 및 ACA의 신속 면제 청원 승인",
+    "title_en": "OET Grants NTCA and ACA Petition for Expedited Waiver",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 NTCA-농촌 브로드밴드 협회와 미국 통신 협회(ACA)의 요청에 따라, 소비자용 라우터 및 브로드밴드 게이트웨이에 대한 특정 하드웨어 변경을 허용하는 면제를 승인했습니다. 이 조치는 공급망 제약으로 인해 NTCA 및 ACA의 회원들이 안정적인 브로드밴드 서비스를 제공할 수 있도록 지원하기 위한 것으로, 2027년 9월 29일까지 유효합니다. 면제된 변경 사항은 성능이나 기능을 개선하지 않으며, 기존 장비의 인증 절차를 준수하는 범위 내에서 이루어집니다. 이러한 결정은 국가 안보 및 공공 안전을 저해하지 않으며, 소비자에게 미치는 피해를 최소화하는 데 기여할 것입니다.",
+    "date": "Sep 29, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-ntca-and-aca-petition-expedited-waiver"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, Actiontec Electronics, Inc의 신속 면제 청원 승인",
+    "title_en": "OET Grants Actiontec Electronics, Inc Petition for Expedited Waiver",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Actiontec Electronics, Inc의 요청을 수용하여, 소비자용 라우터에 대한 Class I 및 Class II 허용 하드웨어 변경을 위한 규정 면제를 1년간 허가했습니다. 이번 조치는 공급망 부족으로 인한 하드웨어 변경이 미국의 브로드밴드 서비스에 중대한 영향을 미칠 수 있다는 점을 고려하여 공공의 이익을 위해 이루어진 것입니다. 면제된 변경 사항은 성능이나 기능을 개선하지 않으며, 기존의 장비 인증을 유지하는 조건 하에 진행됩니다. 따라서, FCC는 향후 1년 동안 이러한 변경을 허용하되, 다른 하드웨어 수정에 대한 규정은 여전히 유효하다고 밝혔습니다.",
+    "date": "Sep 29, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-actiontec-electronics-inc-petition-expedited-waiver"
+  },
+  {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
     "title_ko": "FCC, 4.9 GHz 대역 관리자 선정 절차 시작",
