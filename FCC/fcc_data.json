@@ -1,5 +1,59 @@
 [
   {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "FCC, NEPA 환경 규제 접근 방식 현대화",
+    "title_en": "FCC Modernizes its Approach to NEPA Environmental Regulations",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 오늘 국가환경정책법(NEPA) 규제에 대한 접근 방식을 현대화하는 일련의 허가 개혁을 채택했습니다. 이 개혁은 수십억 달러에 달하는 불필요한 규제를 줄이고, 고속 통신 인프라 구축을 가속화하여 미국 소비자에게 혜택을 제공할 것입니다. 분석가들은 NEPA 검토 프로세스의 현대화가 더 빠른 건설, 일자리 창출 및 투자 증가를 의미하며, 이는 이전에 관료적 절차에 묶여 있던 수십억 달러의 경제 활동을 촉진할 것이라고 보고하고 있습니다. \n\n이번 결정은 FCC가 규제하는 혁신적인 우주 기반 활동에 대한 NEPA 검토가 필요 없음을 명확히 하며, 연간 14,800건 이상의 무선 인프라 구축에 대한 NEPA 검토 요건을 제거하여 전반적인 구축 속도를 더욱 가속화할 예정입니다.",
+    "date": "Sep 30, 2026",
+    "link": "https://www.fcc.gov/document/fcc-modernizes-its-approach-nepa-environmental-regulations"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "WTB, 상부 C-밴드 초기 비용 카탈로그에 대한 의견 요청",
+    "title_en": "WTB Seeks Comment on Upper C-Band Preliminary Cost Catalog",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 상위 C 대역 전환에 대한 초기 비용 카탈로그에 대한 의견을 요청하는 공고를 발표했습니다. 이 카탈로그는 기존의 고정 위성 서비스(FSS) 운영자들이 4.0–4.16 GHz 대역에서 전환하는 과정에서 발생하는 합리적이고 필요한 비용을 보상하기 위한 기준을 제시합니다. 새로운 상위 C 대역 무선 라이센스 보유자는 이러한 전환 비용을 보상해야 하며, 이에 대한 의견 수렴을 통해 카탈로그의 적정성과 추가적인 전환 작업 항목에 대한 제안을 받고 있습니다. 이 조치는 상위 C 대역의 유연한 사용을 촉진하고, 관련 업계의 원활한 전환을 지원하기 위한 것입니다.",
+    "date": "Sep 30, 2026",
+    "link": "https://www.fcc.gov/document/wtb-seeks-comment-upper-c-band-preliminary-cost-catalog"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "FCC, 2026년 공학 및 경제학 상 수상자 발표",
+    "title_en": "FCC Announces Winners of the 2026 Engineering and Economics Awards",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처는 2026년 우수 공학 및 경제 분석 상 수상자를 발표했습니다. 이번 상은 FCC 직원들이 수행한 뛰어난 경제 분석 및 공학적 기여를 인정하는 것으로, 수상자들은 불법 라디오 방송 대응 및 위성 스펙트럼 관련 프로젝트에서 혁신적인 솔루션을 개발한 공로를 인정받았습니다. 이러한 성과는 FCC의 사명 수행에 기여하며, 직원들의 헌신과 전문성이 FCC의 발전을 이끄는 원동력이 되고 있음을 보여줍니다.",
+    "date": "Sep 30, 2026",
+    "link": "https://www.fcc.gov/document/fcc-announces-winners-2026-engineering-and-economics-awards"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, SmartAuger, Inc.에 부여된 면제 수정",
+    "title_en": "OET Modifies Waiver Granted to SmartAuger, Inc.",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SmartAuger, Inc.의 요청에 따라 기존의 면제 조건을 수정하기로 결정했습니다. 이번 수정은 SmartAuger의 초광대역(UWB) 지하 탐지 레이더 장치의 주파수 단계 크기를 5메가헤르츠에서 1-5메가헤르츠로 조정하는 내용을 포함하고 있으며, 이는 장치의 성능을 향상시키고 다양한 토양 및 현장 조건에 최적화된 스캐닝 기능을 제공할 것으로 기대됩니다. 이러한 조치는 공공의 이익을 증진시키며, SmartAuger 장치가 안전 위험을 줄이고 건설 및 유틸리티 작업자에게 중요한 정보를 제공하는 데 기여할 것입니다.",
+    "date": "Sep 30, 2026",
+    "link": "https://www.fcc.gov/document/oet-modifies-waiver-granted-smartauger-inc"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "FCC, 초광대역 기술 규제 현대화 제안",
+    "title_en": "FCC Proposes Modernization of Ultra-Wideband Technology Rules",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 오늘 초광대역 기술(UWB) 규칙 현대화에 대한 제안서를 채택하였으며, 이는 IoT 및 소비자 기기를 포함한 다양한 무면허 제품의 연결성과 경제 성장을 확대하기 위한 조치입니다. 이번 제안은 2002년 최초의 무면허 UWB 운영을 승인한 이후 기술 발전과 혁신적인 사용 사례의 폭발적인 증가를 반영하여, 새로운 UWB 기기 카테고리를 도입하고 기존 규칙의 특정 요소를 업데이트하는 내용을 포함하고 있습니다. 이러한 규칙 업데이트는 규제 부담을 줄이고 혁신의 새로운 기회를 제공하며, 기존의 무선 서비스 보호를 강화하는 방향으로 진행될 예정입니다.",
+    "date": "Sep 30, 2026",
+    "link": "https://www.fcc.gov/document/fcc-proposes-modernization-ultra-wideband-technology-rules"
+  },
+  {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "FCC, 수천 메가헤르츠의 주파수를 시장에 도입하다",
+    "title_en": "FCC Acts to Bring Thousands of Megahertz of Spectrum into Marketplace",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 12 GHz 및 42 GHz 대역에서 1,000메가헤르츠 이상의 스펙트럼을 개방하는 규정을 채택하였습니다. 이번 조치는 차세대 위성 브로드밴드와 같은 다양한 연결 서비스의 발전을 촉진하며, 미국의 상업 경제를 위한 스펙트럼 자원을 효율적으로 관리하기 위한 FCC의 노력의 일환입니다. \n\n특히, 이 조치는 소비자 단말기를 위한 다운링크 스펙트럼을 풍부하게 하여 가정 내 위성 브로드밴드의 대역폭을 증가시키고, 이동 중인 지구국의 스펙트럼 접근성을 강화하여 선박, 항공기 및 차량에 더 나은 연결성을 제공합니다. 또한, 새로운 스펙트럼은 우주에서의 산업 및 상업 혁신을 위한 기회를 열어줄 것으로 기대됩니다.",
+    "date": "Sep 30, 2026",
+    "link": "https://www.fcc.gov/document/fcc-acts-bring-thousands-megahertz-spectrum-marketplace"
+  },
+  {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
     "title_ko": "OET, NTCA 및 ACA의 신속 면제 청원 승인",
