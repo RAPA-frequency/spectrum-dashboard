@@ -1,5 +1,32 @@
 [
   {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 심천 CTB 테스트 기술 유한회사 인가 철회",
+    "title_en": "OET Withdraws Recognition of Shenzhen CTB Testing Technology Co. Ltd.",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Shenzhen CTB Testing Technology Co. Ltd.를 인증된 시험실로서의 인정을 철회하기 위한 절차를 시작했습니다. 이는 CTB가 장비 인증 신청과 관련하여 고의로 부정확하거나 허위의 시험 결과를 제공했기 때문입니다. CTB는 20건 이상의 장비 인증 신청에서 시험 결과를 잘못 제출했으며, 이로 인해 FCC는 CTB의 신뢰성과 기술적 능력에 대한 우려를 표명하고 있습니다. CTB는 향후 35일 이내에 FCC의 결정에 대한 설명을 제출해야 하며, 기한 내에 응답하지 않을 경우 인정을 철회할 수 있는 조치가 취해질 예정입니다.",
+    "date": "Oct 2, 2026",
+    "link": "https://www.fcc.gov/document/oet-withdraws-recognition-shenzhen-ctb-testing-technology-co-ltd"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 심천 STS 시험 서비스 회사에 대한 인정을 철회하다.",
+    "title_en": "OET Withdraws Recognition of Shenzhen STS Test Services Co. Ltd.",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Shenzhen STS Test Services Co. Ltd.를 공인 시험실로서의 인정을 철회하는 조치를 취했습니다. 이는 해당 시험실이 장비 인증 신청과 관련하여 고의로 부정확하거나 허위의 시험 결과를 제공했기 때문입니다. OET는 Shenzhen STS Test Services가 제출한 시험 보고서에서 동일한 시험 데이터를 여러 제품에 대해 사용한 사례를 다수 확인하였으며, 이러한 행위는 FCC 규정을 위반한 것으로 판단했습니다. 이 결정은 장비 인증 프로그램의 핵심 목표를 유지하기 위한 것으로, 독립적인 시험실의 기술적 신뢰성과 객관성이 필수적임을 강조합니다.",
+    "date": "Oct 2, 2026",
+    "link": "https://www.fcc.gov/document/oet-withdraws-recognition-shenzhen-sts-test-services-co-ltd"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, SLG-CPC 시험 연구소의 인정을 철회하다",
+    "title_en": "OET Withdraws the Recognition of SLG-CPC Test Laboratory Co., Ltd",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SLG-CPC Test Laboratory Co., Ltd.의 인증 시험소 지위를 철회하기로 결정했습니다. 이는 SLG-CPC가 장비 인증 신청과 관련하여 고의적으로 부정확하거나 허위의 시험 결과를 제공했기 때문입니다. OET는 SLG-CPC가 제출한 33개의 시험 보고서에서 동일한 시험 데이터를 여러 제품에 대해 반복적으로 사용한 사실을 확인하였으며, 이러한 행위는 시험소의 신뢰성과 기술적 능력을 저해하는 중대한 위반으로 간주됩니다. FCC는 모든 인증 시험소가 공정성과 정확성을 유지해야 한다는 원칙을 강조하며, SLG-CPC의 경우 이러한 기준을 충족하지 못했다고 판단했습니다.",
+    "date": "Oct 2, 2026",
+    "link": "https://www.fcc.gov/document/oet-withdraws-recognition-slg-cpc-test-laboratory-co-ltd"
+  },
+  {
     "bureau": "우주국 (Space)",
     "type": "Notice",
     "title_ko": "FCC, 수천 메가헤르츠의 주파수를 시장에 도입하다",
