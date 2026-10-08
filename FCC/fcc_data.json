@@ -1,5 +1,14 @@
 [
   {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "캐리 위원장, 기기 테스트 실험실 국내 이전 및 상호주의 규칙 제안",
+    "title_en": "Chairman Carr Proposes Device Test Lab Onshoring, Reciprocity Rules",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 전자 기기의 테스트 및 인증 절차에 대한 규제를 강화하는 방안을 제안했습니다. 이 규정은 미국 내 또는 상호 인정이 이루어지는 국가에 위치한 테스트 실험실에서만 테스트가 이루어지도록 제한하며, 이는 미국 산업의 공정한 대우를 보장하기 위한 조치입니다. 이러한 변화는 외국 실험실로의 테스트 외주화로 인해 발생한 미국 내 일자리 감소와 산업 약화를 해결하기 위한 것으로, 2028년 12월 1일부터 시행될 예정입니다.",
+    "date": "Oct 7, 2026",
+    "link": "https://www.fcc.gov/document/chairman-carr-proposes-device-test-lab-onshoring-reciprocity-rules"
+  },
+  {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
     "title_ko": "스페이스X, 직접 장치 서비스용 NGSO MSS 시스템 승인받아",
