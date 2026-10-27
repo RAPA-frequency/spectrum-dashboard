@@ -2,6 +2,15 @@
   {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
+    "title_ko": "OET, ASUSTeK Computer Inc.의 면제 요청 승인",
+    "title_en": "OET Grants ASUSTeK Computer Inc.'s Request for Waiver",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 ASUSTeK Computer Inc.(이하 ASUS)의 요청을 수용하여, 규제 대상 목록에 포함된 소비자용 라우터에 대해 Class I 및 Class II 하드웨어 변경을 허용하는 면제를 부여했습니다. 이 조치는 글로벌 공급망 부족으로 인한 필수 부품의 대체를 가능하게 하여, 기존에 승인된 라우터의 지속적인 사용을 보장하고, 국가 안보 및 공공 안전을 유지하는 데 기여할 것입니다. ASUS는 이 변경이 성능이나 기능을 개선하지 않으며, 미국산 부품을 외국산으로 대체하지 않는다는 점을 명확히 하였습니다. 면제는 2027년 10월 26일까지 유효합니다.",
+    "date": "Oct 26, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-asustek-computer-incs-request-waiver"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
     "title_ko": "인텔 코퍼레이션의 신속 면제 청원",
     "title_en": "Intel Corporation Petition for Expedited Waiver",
     "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 인텔이 요청한 특정 자동 유도 차량(AGVs)의 지속적인 사용 및 유지 관리를 위한 면제를 승인했습니다. 이 조치는 인텔의 반도체 제조 서비스의 중단을 방지하고, 공공의 이익을 도모하기 위해 이루어진 것입니다. 인텔은 AGVs의 하드웨어, 소프트웨어 및 펌웨어 변경을 요청하였으며, 이러한 변경이 국가 안보 및 공공 안전 규정을 저해하지 않음을 확인했습니다. 따라서, 인텔은 향후 1년간 AGVs의 운영을 지속할 수 있게 되었습니다.",
