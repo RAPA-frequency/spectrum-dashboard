@@ -2,6 +2,24 @@
   {
     "bureau": "공학기술처 (OET)",
     "type": "Notice",
+    "title_ko": "FCC, 아마존 레오의 글로벌스타 인수 승인",
+    "title_en": "FCC Approves Amazon Leo's Acquisition of Globalstar",
+    "summary": "FCC(미국 연방통신위원회)의 우주국은 아마존 레오가 글로벌스타의 약 25메가헤르츠의 모바일 위성 서비스 스펙트럼을 인수하는 신청을 승인했습니다. 이번 결정은 아마존 레오의 115억 달러 규모의 글로벌스타 인수 검토를 마무리하며, 직접 장치 간 통신 경쟁을 확대하고, 긴급 통신 능력을 강화하며, 서비스가 부족한 지역의 데이터 커버리지를 향상시킬 것으로 기대됩니다. FCC는 이 거래가 공공의 이익에 기여할 것으로 판단하였으며, 아마존은 글로벌스타의 인프라를 활용하여 기존 서비스의 용량과 기능을 증대시킬 계획입니다.",
+    "date": "Oct 27, 2026",
+    "link": "https://www.fcc.gov/document/fcc-approves-amazon-leos-acquisition-globalstar-0"
+  },
+  {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "FCC, 아마존 레오의 글로벌스타 인수 승인",
+    "title_en": "FCC Approves Amazon Leo's Acquisition of Globalstar",
+    "summary": "FCC(미국 연방통신위원회)의 우주국은 Amazon Leo의 Globalstar 인수 신청을 승인하였습니다. 이번 인수는 Amazon Leo가 약 25메가헤르츠의 모바일 위성 서비스 스펙트럼을 확보하게 하여, 직접 장치 간 통신 경쟁을 확대하고, 긴급 통신 능력을 강화하며, 서비스가 부족한 지역의 데이터 커버리지를 개선하는 데 기여할 것입니다. FCC는 이 거래가 공공의 이익에 부합하며, 산업 및 기업 데이터 서비스의 성장을 촉진하고, 모바일 위성 서비스 스펙트럼의 활용을 증대시킬 것으로 판단하였습니다.",
+    "date": "Oct 27, 2026",
+    "link": "https://www.fcc.gov/document/fcc-approves-amazon-leos-acquisition-globalstar-0"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
     "title_ko": "OET, ASUSTeK Computer Inc.의 면제 요청 승인",
     "title_en": "OET Grants ASUSTeK Computer Inc.'s Request for Waiver",
     "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 ASUSTeK Computer Inc.(이하 ASUS)의 요청을 수용하여, 규제 대상 목록에 포함된 소비자용 라우터에 대해 Class I 및 Class II 하드웨어 변경을 허용하는 면제를 부여했습니다. 이 조치는 글로벌 공급망 부족으로 인한 필수 부품의 대체를 가능하게 하여, 기존에 승인된 라우터의 지속적인 사용을 보장하고, 국가 안보 및 공공 안전을 유지하는 데 기여할 것입니다. ASUS는 이 변경이 성능이나 기능을 개선하지 않으며, 미국산 부품을 외국산으로 대체하지 않는다는 점을 명확히 하였습니다. 면제는 2027년 10월 26일까지 유효합니다.",
