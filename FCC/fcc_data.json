@@ -2,6 +2,87 @@
   {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
+    "title_ko": "OET와 WTB, Qualcomm Incorporated의 청원 일부를 기각하다",
+    "title_en": "OET and WTB Deny in Part a Petition Filed by Qualcomm Incorporated",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)와 무선통신국(WTB)은 Qualcomm Incorporated가 제출한 규제 개정 청원에 대해 일부를 기각하는 조치를 취했습니다. Qualcomm은 1675-1695 MHz 대역에서 공공 안전 응용을 위한 전용 5G \"사이드링크\" 기술을 위한 주파수 할당을 요청했으나, FCC는 해당 대역에 대한 요청을 기각하고 5350-5470 MHz 대역에 대해서는 현재로서는 조치를 취하지 않기로 결정했습니다. 이는 NTIA가 해당 대역을 상업적 용도로 재배치하기 위한 연구를 진행 중이며, FCC가 2028년 경 경매를 계획하고 있는 점을 고려한 것입니다. 이러한 결정은 공공 안전 통신의 향상을 위한 다양한 의견에도 불구하고, 스펙트럼 경매의 효율성을 유지하기 위한 조치입니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/oet-and-wtb-deny-part-petition-filed-qualcomm-incorporated"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "FCC, 드론을 위한 추가 이동통신 주파수 개방",
+    "title_en": "FCC Opens More Cellular Spectrum for Drones",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 드론 운영을 위한 800 MHz 대역의 스펙트럼을 개방하는 새로운 규정을 채택했습니다. 이번 조치는 드론이 저대역 스펙트럼의 50 메가헤르츠에서 운영되는 것을 방해하던 규제를 해소하여 혁신을 촉진하고, 드론의 다양한 활용 가능성을 극대화하는 데 기여합니다. FCC는 드론 기술과 운영의 미국 우위를 확보하기 위해 스펙트럼 접근을 상업화하고, 드론 혁신을 지원하는 다양한 조치를 시행하고 있으며, 이를 통해 드론 산업의 발전을 도모하고 있습니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/fcc-opens-more-cellular-spectrum-drones"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "FCC, D2D 서비스의 임대 규정 현대화를 제안하다",
+    "title_en": "FCC Proposes to Modernize Leasing Rules for D2D Services",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 오늘 라이센스 스펙트럼에서 직접 장치(D2D) 서비스에 대한 규정을 현대화하는 제안을 채택했습니다. 이번 제안은 지상, 위성 및 하이브리드 비즈니스 모델을 보다 유연하게 지원하고, 소비자에게 고품질 D2D 서비스를 제공하기 위한 규제 장벽을 제거하는 내용을 포함하고 있습니다. 특히, FCC는 D2D 서비스에 대한 스펙트럼의 풍부함을 강조하며, 기존의 5개 대역에서 13개 대역으로 SCS(보조 커버리지 공간) 허가 대역을 확대하고, 추가로 482메가헤르츠의 스펙트럼을 확보할 계획입니다. 이러한 변화는 D2D 서비스의 혁신과 투자를 촉진하여 소비자에게 실질적인 혜택을 제공하는 데 기여할 것입니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/fcc-proposes-modernize-leasing-rules-d2d-services"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "FCC, 25메가헤르츠의 주요 중간 대역 스펙트럼 경매 계획",
+    "title_en": "FCC Aims to Auction 25 Megahertz of Prime, Mid-Band Spectrum",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 5G 및 직접 장치 통신 서비스 등 고급 통신 서비스를 위한 25메가헤르츠의 중간 대역 스펙트럼 경매를 제안했습니다. 이번 경매는 1675-1695 MHz 및 2020-2025 MHz 대역의 스펙트럼을 대상으로 하며, 이는 직접 장치(D2D) 기술의 급증하는 수요와 혁신을 반영한 조치입니다. FCC는 2028년까지 최대 400메가헤르츠의 스펙트럼을 상업적 용도로 경매할 계획이며, 이를 통해 미국 국민에게 막대한 경제적 가치를 창출할 것으로 기대하고 있습니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/fcc-aims-auction-25-megahertz-prime-mid-band-spectrum"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET와 WTB, Qualcomm Incorporated의 청원 일부를 기각하다",
+    "title_en": "OET and WTB Deny in Part a Petition Filed by Qualcomm Incorporated",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)와 무선통신국(WTB)은 Qualcomm Incorporated가 제출한 규제 개정 청원에 대해 일부 거부 결정을 내렸습니다. Qualcomm은 1675-1695 MHz 대역에서 공공 안전 응용 프로그램을 위한 전용 5G \"사이드링크\" 기술을 위한 주파수 할당을 요청했으나, FCC는 해당 대역에 대한 요청을 기각하고 5350-5470 MHz 대역에 대해서는 현재 조치를 취하지 않기로 했습니다. 이는 NTIA가 상기 대역을 상업적 용도로 재배치하기 위한 연구를 진행 중이며, FCC가 2028년 경 경매를 계획하고 있는 점을 반영한 조치입니다. 이러한 결정은 공공 안전 통신의 향상과 상업적 서비스의 효율성을 동시에 고려한 결과입니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/oet-and-wtb-deny-part-petition-filed-qualcomm-incorporated"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 아스키 컴퓨터사의 신속 면제 요청 승인",
+    "title_en": "OET Grants Askey Computer Corp.'s Expedited Waiver Request",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Askey Computer Corp.의 요청을 수용하여, 외국에서 생산된 소비자용 라우터에 대해 1년간 Class I 및 Class II 허용 하드웨어 변경을 허용하는 면제를 부여했습니다. 이는 공급망 부족으로 인한 장비 공급 중단을 방지하고, 기존에 승인된 라우터의 지속적인 가용성을 보장하기 위한 조치입니다. 이번 면제는 성능이나 기능을 개선하지 않으며, 미국에서 생산된 부품을 외국산으로 대체하지 않는 조건 하에 이루어집니다. 이러한 결정은 국가 안보 및 공공 안전을 저해하지 않으며, 소비자에게 미치는 피해를 최소화하는 데 기여할 것입니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/oet-grants-askey-computer-corps-expedited-waiver-request"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "FCC, 장비 시험실 국내 이전 및 상호주의 규정 추진",
+    "title_en": "FCC Proceeds on Device Test Lab Onshoring, Reciprocity Rules",
+    "summary": "죄송하지만, 제공된 내용이 공문서가 아닌 오류 메시지로 보입니다. 다른 공문서나 자료를 제공해 주시면, 그에 맞춰 정책 브리핑을 작성해 드리겠습니다. 감사합니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/fcc-proceeds-device-test-lab-onshoring-reciprocity-rules"
+  },
+  {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "캐리 위원장, 새로운 우주국 국장 발표",
+    "title_en": "Chairman Carr Announces New Space Bureau Chief",
+    "summary": "FCC(미국 연방통신위원회)의 우주국(Space Bureau)은 오늘 브렌던 카르 위원장이 코트니 라인하르드를 새로운 우주국장으로 임명했다고 발표했습니다. 우주국은 미국의 연결성, 기술 및 국가 안보를 강화하는 데 중요한 역할을 하며, 21세기 현대화된 우주 규칙과 효율적인 면허 발급 절차를 통해 미국의 우주 경제를 촉진하는 데 기여하고 있습니다. 코트니 라인하르드는 민간 부문과 미국 상원에서의 경험을 바탕으로 우주국 팀을 이끌며, 미국이 우주 분야에서 선도적인 위치를 유지할 수 있도록 노력할 예정입니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/chairman-carr-announces-new-space-bureau-chief"
+  },
+  {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "FCC, D2D 서비스 임대 규정 현대화 제안",
+    "title_en": "FCC Proposes to Modernize Leasing Rules for D2D Services",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 오늘 D2D(디바이스 간 직접 통신) 서비스에 대한 규제를 현대화하기 위한 제안서를 채택했습니다. 이번 제안은 소비자에게 고품질 D2D 서비스를 제공하기 위해 지상, 위성 및 하이브리드 비즈니스 모델을 촉진하고, 482메가헤르츠의 새로운 주파수를 추가로 확보하는 내용을 포함하고 있습니다. 또한, 기존의 경직된 SCS(보조 커버리지 공간) 요구사항을 완화하고, 지리적 라이센스 지역 및 공존 협정 요구사항으로 대체할 방안을 모색하고 있습니다. 이러한 변화는 미국의 혁신과 투자 촉진을 위한 중요한 조치로, 소비자에게 실질적인 혜택을 제공하는 D2D 서비스의 성장을 지원할 것입니다.",
+    "date": "Oct 29, 2026",
+    "link": "https://www.fcc.gov/document/fcc-proposes-modernize-leasing-rules-d2d-services"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
     "title_ko": "캐르, 교도소에서 불법 휴대전화 신호 차단 허용 투표 발표",
     "title_en": "Carr Announces Vote to Permit Prisons to Jam Contraband Cellphones",
     "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 다음 달, 주 및 연방 교도소에서 불법 휴대전화를 차단할 수 있도록 허용하는 최종 규칙에 대한 투표를 진행할 예정입니다. 이 조치는 교도소 내에서 불법 휴대전화가 범죄 활동에 악용되는 문제를 해결하기 위한 것으로, 교도소가 자율적으로 이 기술을 사용할 수 있도록 하는 것입니다. FCC는 이러한 조치를 통해 공공 안전을 강화하고, 범죄자들이 교도소 내에서 불법적으로 통신하는 것을 차단할 수 있는 새로운 도구를 제공할 계획입니다. 이로 인해 교도소 내 범죄 활동이 감소하고, 교도관 및 일반 시민의 안전이 향상될 것으로 기대됩니다.",
