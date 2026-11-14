@@ -1,5 +1,41 @@
 [
   {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "검사총장 요청에 대한 기한 연장 거부 명령",
+    "title_en": "Order Denying Attorneys General's Request for Extension of Time",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 뉴욕주 및 워싱턴주 법무장관이 제출한 NEPA(국가환경정책법) 규정 현대화에 대한 의견 제출 기한 연장 요청을 거부했습니다. 법무장관들은 상원에서 진행 중인 법안이 통과될 경우 새로운 법적 정의가 필요할 것이라며 추가 시간이 필요하다고 주장했으나, FCC는 그러한 사유가 기한 연장을 정당화하기에 충분하지 않다고 판단했습니다. 이에 따라, FCC는 의견 제출 마감일을 변경하지 않고 기존 일정대로 진행할 예정입니다.",
+    "date": "Nov 13, 2026",
+    "link": "https://www.fcc.gov/document/order-denying-attorneys-generals-request-extension-time"
+  },
+  {
+    "bureau": "무선통신국 (WTB)",
+    "type": "Notice",
+    "title_ko": "FCC, 2027년 4월 27일 상부 C밴드 경매 시작 발표",
+    "title_en": "FCC Announces Start of Upper C-Band Auction on April 27, 2027",
+    "summary": "FCC(미국 연방통신위원회)의 무선통신국(WTB)은 2027년 4월 27일에 3.98–4.14 GHz 대역의 상부 C-대역 스펙트럼 160 메가헤르츠에 대한 경매를 실시할 예정입니다. 이번 경매는 440 메가헤르츠의 통합된 '슈퍼 밴드'를 형성하여 5G 및 6G 서비스의 혁신을 촉진하고, 미국 경제에 수십억 달러의 투자와 혁신을 유도할 것으로 기대됩니다. FCC는 이 경매를 통해 2030년까지 대부분의 미국인들이 상부 C-대역을 이용할 수 있도록 할 계획이며, 이는 미국의 경제 성장과 일자리 창출에 기여할 것입니다. 또한, FCC는 항공 안전 시스템과의 조화를 고려하여 스펙트럼 사용 규칙을 마련하여 5G로의 신속한 전환을 지원할 것입니다.",
+    "date": "Nov 13, 2026",
+    "link": "https://www.fcc.gov/document/fcc-announces-start-upper-c-band-auction-april-27-2027"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, 심천 인식 철회",
+    "title_en": "OET Withdraws Recognition of Shenzhen",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 SGS-CSTC Standards Technical Services Co. Ltd.의 인증 시험소 인정을 철회하기로 결정했습니다. 이는 해당 시험소가 중국 정부와 관련된 금지된 외국 기관의 소유 및 통제를 받고 있다는 판단에 따른 조치입니다. FCC는 시험소의 소유 구조와 운영 방식이 국가 안보에 위협이 될 수 있음을 고려하여, 공공의 이익을 보호하기 위한 규정을 엄격히 적용하고 있습니다. 이로 인해 SGS-CSTC Shenzhen은 더 이상 FCC의 인증 시험소로 인정받지 못하게 되며, 이는 해당 기관의 시험 결과에 대한 신뢰성에 중대한 영향을 미칠 것으로 예상됩니다.",
+    "date": "Nov 13, 2026",
+    "link": "https://www.fcc.gov/document/oet-withdraws-recognition-shenzhen"
+  },
+  {
+    "bureau": "공학기술처 (OET)",
+    "type": "Notice",
+    "title_ko": "OET, Vantiva USA, LLC의 신속 면제 요청 부분 승인",
+    "title_en": "OET Partially Grants Vantiva USA, LLC's Expedited Waiver Request",
+    "summary": "FCC(미국 연방통신위원회)의 공학기술처(OET)는 Vantiva USA LLC의 요청을 부분적으로 승인하여, 외국에서 생산된 소비자용 라우터에 대해 Class I 및 Class II 허용 하드웨어 변경을 허용하는 면제를 1년간 부여하기로 결정했습니다. 이는 공급망 중단으로 인한 부품 부족 문제를 해결하고, 미국 소비자에게 안정적인 브로드밴드 장비 공급을 유지하기 위한 조치입니다. 이번 면제는 성능이나 기능을 개선하지 않으며, 미국산 부품을 외국산으로 대체하지 않는 조건 하에 시행됩니다. 따라서, FCC는 이러한 변경이 국가 안보 및 공공 안전 목적을 저해하지 않는다고 판단했습니다.",
+    "date": "Nov 13, 2026",
+    "link": "https://www.fcc.gov/document/oet-partially-grants-vantiva-usa-llcs-expedited-waiver-request"
+  },
+  {
     "bureau": "우주국 (Space)",
     "type": "Notice",
     "title_ko": "우주국, Kineis의 수정 청원 거부",
