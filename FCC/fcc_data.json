@@ -1,5 +1,14 @@
 [
   {
+    "bureau": "우주국 (Space)",
+    "type": "Notice",
+    "title_ko": "FCC, 우주 데이터 센터를 위한 100만 개 위성 승인",
+    "title_en": "FCC Authorizes 1 Million Satellites for Data Centers in Space",
+    "summary": "FCC(미국 연방통신위원회)의 우주국은 미국 역사상 최초로 우주에 데이터 센터를 위한 1,000,000개의 위성 배치 승인을 부여했습니다. 이는 미국의 초지능 경제 발전에 기여하며, 인류가 태양의 모든 에너지를 활용할 수 있는 Kardashev II 문명으로 나아가는 중요한 이정표가 될 것입니다. SpaceX는 이 승인을 통해 초지능 컴퓨팅 수요에 대응하기 위해 'Starmind'라는 이름의 위성 군집을 구축하고, 안정적인 통신 및 제어 시스템을 유지할 수 있는 기반을 마련할 예정입니다. FCC는 추가적인 우주 데이터 센터 제안도 검토 중이며, 신속한 결정을 내릴 계획입니다.",
+    "date": "Nov 25, 2026",
+    "link": "https://www.fcc.gov/document/fcc-authorizes-1-million-satellites-data-centers-space-0"
+  },
+  {
     "bureau": "무선통신국 (WTB)",
     "type": "Notice",
     "title_ko": "경매 113 장기형 신청서 접수 승인",
